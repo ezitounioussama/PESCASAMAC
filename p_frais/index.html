@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind Framework CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <!-- Font-Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <!-- Airplane JS -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
+    <title>Pesca Samac</title>
+  </head>
+  <body>
+    <div class="bg-blue-700 px-4 py-3 text-white">
+      <p class="text-center text-md font-medium body_font font-bold">
+        Frais de livraison offerts au-dessus de 500DH de commande.
+      </p>
+    </div>
+    <!--
+    This component uses @tailwindcss/forms
+  
+    yarn add @tailwindcss/forms
+    npm install @tailwindcss/forms
+  
+    plugins: [require('@tailwindcss/forms')]
+  -->
+
+    <!--
+  @layer components {
+    .no-spinner {
+      -moz-appearance: textfield;
+    }
+  
+    .no-spinner::-webkit-outer-spin-button,
+    .no-spinner::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+  -->
+
+    <section>
+      <div class="relative mx-auto max-w-screen-xl px-4 py-8">
+        <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
+            <img
+              alt="Les Paul"
+              src="../img/five.jpg"
+              class="aspect-square w-full rounded-xl object-cover"
+            />
+
+            <!-- <div class="grid grid-cols-2 gap-4 lg:mt-4">
+              <img
+                alt="Les Paul"
+                src="../img/second.jpg"
+                class="aspect-square w-full rounded-xl object-cover"
+              />
+
+              <img
+                alt="Les Paul"
+                src="../img/second.jpg"
+                class="aspect-square w-full rounded-xl object-cover"
+              />
+
+              <img
+                alt="Les Paul"
+                src="../img/second.jpg"
+                class="aspect-square w-full rounded-xl object-cover"
+              />
+
+              <img
+                alt="Les Paul"
+                src="../img/second.jpg"
+                class="aspect-square w-full rounded-xl object-cover"
+              />
+            </div> -->
+          </div>
+
+          <div class="sticky top-0">
+            <strong
+              class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
+            >
+              ******
+            </strong>
+
+            <div class="mt-8 flex justify-left">
+              <div class="max-w-[55ch]">
+                <h1 class="text-2xl font-bold">Name of product selected</h1>
+              </div>
+            </div>
+
+            <!-- <details class="group relative mt-4">
+              <summary class="block">
+                <div>
+                  <div class="prose max-w-none group-open:hidden">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Ipsa veniam dicta beatae eos ex error culpa delectus rem
+                      tenetur, architecto quam nesciunt, dolor veritatis nisi
+                      minus inventore, rerum at recusandae?
+                    </p>
+                  </div>
+
+                  <span
+                    class="mt-4 cursor-pointer text-sm font-medium underline group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0"
+                  >
+                    Read More
+                  </span>
+                </div>
+              </summary>
+
+              <div class="prose max-w-none pb-6">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  veniam dicta beatae eos ex error culpa delectus rem tenetur,
+                  architecto quam nesciunt, dolor veritatis nisi minus
+                  inventore, rerum at recusandae?
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat nam sapiente nobis ea veritatis error consequatur nisi
+                  exercitationem iure laudantium culpa, animi temporibus non!
+                  Maxime et quisquam amet. A, deserunt!
+                </p>
+              </div>
+            </details> -->
+
+            <form class="mt-8">
+              <fieldset>
+                <legend class="mb-3 text-sm font-medium">Calibre</legend>
+
+                <div class="flow-root">
+                  <div class="-m-0.5 flex flex-wrap">
+                    <select
+                      class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm font-normal focus:z-10"
+                      id="country"
+                      name="country"
+                      autocomplete="country-name"
+                    >
+                      <option value="">Choisir une option</option>
+                      <option value="2">400/600</option>
+                      <option value="3">600/800</option>
+                      <option value="4">800/1000</option>
+                      <option value="5">1Kg Plus</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="mt-8">
+                <legend class="mb-3 text-sm font-medium">
+                  Choisissez le traitement
+                </legend>
+
+                <div class="flow-root">
+                  <div class="-m-0.5 flex flex-wrap">
+                    <select
+                      class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm focus:z-10"
+                      id="country"
+                      name="country"
+                      autocomplete="country-name"
+                    >
+                      <option value="">Choisir une option</option>
+                      <option value="2">Entier caisse de 6Kg+</option>
+                      <option value="3">Entier caisse de 10Kg+</option>
+                      <option value="4">Filets écaillés désarêté</option>
+                      <option value="5">Vidé</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="mt-8 flex">
+                <div>
+                  <label for="quantity" class="sr-only">Qty</label>
+
+                  <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    value="1"
+                    class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="ml-3 block rounded bg-blue-700 px-5 py-3 text-xs font-medium text-white hover:bg-blue-600"
+                >
+                  Calc
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
