@@ -140,13 +140,13 @@ cite {
   padding: 0 15px;
   font-size: 14px;
   background-color: green;
-  width: 80px;
+  width: 75px;
   height: 60px;
 
   border-top-right-radius: 22%;
   border-bottom-right-radius: 22%;
   position: relative;
-  right: -80px;
+  right: -75px;
   transition: transform 0.3s ease-in-out;
 }
 
