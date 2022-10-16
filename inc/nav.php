@@ -14,14 +14,14 @@
                 </svg>
             </button>
 
-            <a href="" class="flex">
+            <a href="../" class="flex">
                 <span class="inline-block h-12 w-32 rounded-lg"><img src="../img/logo pesca samac..png" class="w-32 h-12 rounded-lg" alt="" /></span>
             </a>
         </div>
 
         <div class="flex flex-1 items-center justify-end">
             <nav class="hidden lg:flex lg:gap-4 lg:text-md lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500">
-                <a href="p_frais/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                <a href="../p_frais/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     P.frais
                 </a>
 
@@ -77,7 +77,7 @@
             <div>
                 <ul>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="p_frais/home.php">P.frais</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../p_frais/home.php">P.frais</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#P.Congeles">P.Congeles</a>
