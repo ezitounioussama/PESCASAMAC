@@ -1,5 +1,5 @@
 <div class="bg-blue-700 px-4 py-3 text-white">
-    <p class="text-center text-md font-medium band_font font-bold">
+    <p class="text-center text-xl font-medium band_font font-bold">
         Frais de livraison offerts au-dessus de 500DH de commande.
     </p>
 </div>

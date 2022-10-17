@@ -13,7 +13,7 @@
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <!-- Main Style -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../p_frais/assests/style.css" />
     <!-- Javascript -->
     <script src="../inc/script.js" defer></script>
     <script src="../p_frais/assests/traitments.js" defer></script>

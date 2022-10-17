@@ -79,11 +79,14 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-sm font-medium">Calibre :</legend>
+              <legend class="mb-3 text-md font-medium">Calibre :</legend>
 
               <div class="flow-root">
-                <div class="-m-0.5 flex flex-wrap">
-                  <select id="mycalibre" class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
+
+                <div class="-m-0.5 flex flex-wrap justify-right">
+
+                  <select id="mycalibre" class="relative w-full rounded-lg  p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
+
                     <option value="" selected>Choisir une option </option>
 
                     <option value="2" <?php if (!($product['c1'])) {
@@ -101,7 +104,10 @@ $featured = mysqli_query($conn, $sql);
                     <option value="5" <?php if (!($product['c5'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c5']; ?></option>
+
                   </select>
+
+
                 </div>
               </div>
             </fieldset>
@@ -109,13 +115,13 @@ $featured = mysqli_query($conn, $sql);
             <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4']) {
                                       echo "hidden";
                                     } ?>>
-              <legend class="mb-3 text-sm font-medium">
+              <legend class="mb-3 text-md font-medium">
                 Choisissez le traitement :
               </legend>
 
               <div class="flow-root">
                 <div class="-m-0.5 flex flex-wrap">
-                  <select id="myselection" class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm focus:z-10">
+                  <select id="myselection" class="relative w-full rounded-lg  p-2.5 text-sm focus:z-10">
                     <option value="" selected>Choisir une option </option>
                     <option value="2" <?php if (!($product['t1'])) {
                                         echo "hidden";
@@ -133,6 +139,10 @@ $featured = mysqli_query($conn, $sql);
                                         echo "hidden";
                                       } ?>><?= $product['t5']; ?></option>
                   </select>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 interdit">
+                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                  </svg>
                   <script>
                     if (($('#id').html() == 5)) {
                       $('#myselection').change(function() {
