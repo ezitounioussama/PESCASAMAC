@@ -79,12 +79,12 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-sm font-medium">Calibre</legend>
+              <legend class="mb-3 text-sm font-medium">Calibre :</legend>
 
               <div class="flow-root">
                 <div class="-m-0.5 flex flex-wrap">
-                  <select class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
-                    <option value="" selected>Choisir une option :</option>
+                  <select id="mycalibre" class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
+                    <option value="" selected>Choisir une option </option>
 
                     <option value="2" <?php if (!($product['c1'])) {
                                         echo "hidden";
@@ -98,6 +98,9 @@ $featured = mysqli_query($conn, $sql);
                     <option value="5" <?php if (!($product['c4'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c4']; ?></option>
+                    <option value="5" <?php if (!($product['c5'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['c5']; ?></option>
                   </select>
                 </div>
               </div>
@@ -107,13 +110,13 @@ $featured = mysqli_query($conn, $sql);
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-sm font-medium">
-                Choisissez le traitement
+                Choisissez le traitement :
               </legend>
 
               <div class="flow-root">
                 <div class="-m-0.5 flex flex-wrap">
                   <select id="myselection" class="relative w-full rounded-lg border-gray-200 p-2.5 text-sm focus:z-10">
-                    <option value="" selected>Choisir une option :</option>
+                    <option value="" selected>Choisir une option </option>
                     <option value="2" <?php if (!($product['t1'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t1']; ?></option>
@@ -126,6 +129,9 @@ $featured = mysqli_query($conn, $sql);
                     <option value="5" <?php if (!($product['t4'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t4']; ?></option>
+                    <option value="5" <?php if (!($product['t5'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t5']; ?></option>
                   </select>
                   <script>
                     if (($('#id').html() == 5)) {
@@ -139,18 +145,14 @@ $featured = mysqli_query($conn, $sql);
 
 
                     }
-
-
-
-                    // if ($product['id'] = 5) {
-                    //   
-                    // } else {
-                    //   echo "";
-                    // }
                   </script>
                 </div>
               </div>
             </fieldset>
+
+            <div class="flex justify-center align-center my-5">
+              <span id="trtm" class="text-2xl font-bold text-red-600 capitalize"></span>
+            </div>
 
             <div class="mt-8 flex">
               <div>

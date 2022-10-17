@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Javascript -->
     <script src="../inc/script.js" defer></script>
+    <script src="../p_frais/assests/traitments.js" defer></script>
     <!-- Font-Awesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <!-- Airplane JS -->

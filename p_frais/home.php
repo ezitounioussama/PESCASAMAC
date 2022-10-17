@@ -38,7 +38,7 @@ require_once('inc/fetchData.php');
 
 
                   <button type="button" class="mt-4 flex w-full items-center justify-center rounded-xl bg-blue-600 text-white px-8 py-4">
-                    <span class="text-sm font-bold capitalize"> choix de preparation</span>
+                    <span class="text-sm font-bold capitalize"> choix de préparation</span>
 
 
                   </button>
