@@ -146,10 +146,10 @@ $featured = mysqli_query($conn, $sql);
                   <script>
                     if (($('#id').html() == 2)) {
                       $('#myselection').change(function() {
-                        if (($("#myselection option:selected").text() == "orange") || ($("#myselection option:selected").text() == "Choisir une option")) {
+                        if (($("#myselection option:selected").text() == "rouge") || ($("#myselection option:selected").text() == "Choisir une option")) {
                           $('#myIMG').attr('src', "img/<?= $product['pic']; ?>");
                         } else {
-                          $('#myIMG').attr('src', "img/surimiRouge.png");
+                          $('#myIMG').attr('src', "img/surimiOrange.png");
                         }
                       })
 
