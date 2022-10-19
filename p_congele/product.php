@@ -144,12 +144,12 @@ $featured = mysqli_query($conn, $sql);
                   </select>
 
                   <script>
-                    if (($('#id').html() == 5)) {
+                    if (($('#id').html() == 2)) {
                       $('#myselection').change(function() {
-                        if ($("#myselection option:selected").text() == "Entier") {
+                        if (($("#myselection option:selected").text() == "orange") || ($("#myselection option:selected").text() == "Choisir une option")) {
                           $('#myIMG').attr('src', "img/<?= $product['pic']; ?>");
                         } else {
-                          $('#myIMG').attr('src', "img/Espadon en longe.jpg");
+                          $('#myIMG').attr('src', "img/surimiRouge.png");
                         }
                       })
 

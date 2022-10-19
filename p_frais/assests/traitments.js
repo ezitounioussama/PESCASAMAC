@@ -3,14 +3,14 @@
 if ($("#id").html() == 1) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
       $("svg").hide();
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
@@ -18,7 +18,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -26,7 +26,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -34,7 +34,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -42,7 +42,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -50,7 +50,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
@@ -58,7 +58,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -66,7 +66,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -74,7 +74,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -82,7 +82,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -90,7 +90,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 10Kg+"
     ) {
       $("#trtm").html("");
@@ -98,7 +98,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -106,7 +106,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -114,7 +114,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -122,7 +122,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1000/1500" &&
+      $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -130,7 +130,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1000/1500" &&
+      $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 10Kg+"
     ) {
       $("#trtm").html("");
@@ -138,7 +138,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1000/1500" &&
+      $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -146,7 +146,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1000/1500" &&
+      $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -154,7 +154,7 @@ if ($("#id").html() == 1) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1000/1500" &&
+      $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -171,7 +171,7 @@ if ($("#id").html() == 1) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -183,7 +183,7 @@ if ($("#id").html() == 1) {
 if ($("#id").html() == 2) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
@@ -191,7 +191,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -199,7 +199,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -207,7 +207,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -215,7 +215,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "400/600" &&
+      $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -223,7 +223,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -231,7 +231,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
@@ -239,7 +239,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -247,7 +247,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -255,7 +255,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "600/800" &&
+      $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -263,7 +263,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -271,7 +271,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 10Kg+"
     ) {
       $("#trtm").html("");
@@ -279,7 +279,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
@@ -287,7 +287,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
@@ -295,7 +295,7 @@ if ($("#id").html() == 2) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
@@ -344,7 +344,7 @@ if ($("#id").html() == 2) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -381,7 +381,7 @@ if ($("#id").html() == 3) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -393,7 +393,7 @@ if ($("#id").html() == 3) {
 if ($("#id").html() == 4) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -401,7 +401,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1300/2000" &&
+      $("#mycalibre option:selected").text() == "1300/2000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -409,7 +409,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1500/2100" &&
+      $("#mycalibre option:selected").text() == "1500/2100gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -417,7 +417,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Fiets de turbot"
     ) {
       $("#trtm").html("");
@@ -425,7 +425,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1300/2000" &&
+      $("#mycalibre option:selected").text() == "1300/2000gr" &&
       $("#myselection option:selected").text() == "Fiets de turbot"
     ) {
       $("#trtm").html("");
@@ -433,7 +433,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1500/2100" &&
+      $("#mycalibre option:selected").text() == "1500/2100gr" &&
       $("#myselection option:selected").text() == "Fiets de turbot"
     ) {
       $("#trtm").html("");
@@ -441,7 +441,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/1000" &&
+      $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Pavé de turbot"
     ) {
       $("#trtm").html("");
@@ -449,7 +449,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1300/2000" &&
+      $("#mycalibre option:selected").text() == "1300/2000gr" &&
       $("#myselection option:selected").text() == "Pavé de turbot"
     ) {
       $("#trtm").html("");
@@ -457,7 +457,7 @@ if ($("#id").html() == 4) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1500/2100" &&
+      $("#mycalibre option:selected").text() == "1500/2100gr" &&
       $("#myselection option:selected").text() == "Pavé de turbot"
     ) {
       $("#trtm").html("");
@@ -474,7 +474,7 @@ if ($("#id").html() == 4) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -505,7 +505,7 @@ if ($("#id").html() == 5) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -517,7 +517,7 @@ if ($("#id").html() == 5) {
 if ($("#id").html() == 6) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "800/2000" &&
+      $("#mycalibre option:selected").text() == "800/2000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -525,7 +525,7 @@ if ($("#id").html() == 6) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "2100/4000" &&
+      $("#mycalibre option:selected").text() == "2100/4000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -533,7 +533,7 @@ if ($("#id").html() == 6) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "800/2000" &&
+      $("#mycalibre option:selected").text() == "800/2000gr" &&
       $("#myselection option:selected").text() == "Filet"
     ) {
       $("#trtm").html("");
@@ -541,7 +541,7 @@ if ($("#id").html() == 6) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "2100/4000" &&
+      $("#mycalibre option:selected").text() == "2100/4000gr" &&
       $("#myselection option:selected").text() == "Filet"
     ) {
       $("#trtm").html("");
@@ -558,7 +558,7 @@ if ($("#id").html() == 6) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -604,7 +604,7 @@ if ($("#id").html() == 7) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -616,7 +616,7 @@ if ($("#id").html() == 7) {
 if ($("#id").html() == 8) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "500g" &&
+      $("#mycalibre option:selected").text() == "500gr" &&
       $("#myselection option:selected").text() == "Frais"
     ) {
       $("#trtm").html("");
@@ -624,7 +624,7 @@ if ($("#id").html() == 8) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "500g" &&
+      $("#mycalibre option:selected").text() == "500gr" &&
       $("#myselection option:selected").text() == "Surgelé"
     ) {
       $("#trtm").html("");
@@ -641,7 +641,7 @@ if ($("#id").html() == 8) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -670,7 +670,7 @@ if ($("#id").html() == 9) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -682,7 +682,7 @@ if ($("#id").html() == 9) {
 if ($("#id").html() == 10) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "100g/120g" &&
+      $("#mycalibre option:selected").text() == "100/120gr" &&
       $("#myselection option:selected").text() == "Frais"
     ) {
       $("#trtm").html("");
@@ -690,7 +690,7 @@ if ($("#id").html() == 10) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "150g/170g" &&
+      $("#mycalibre option:selected").text() == "150/170gr" &&
       $("#myselection option:selected").text() == "Frais"
     ) {
       $("#trtm").html("");
@@ -698,7 +698,7 @@ if ($("#id").html() == 10) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "170g/190g" &&
+      $("#mycalibre option:selected").text() == "170/190gr" &&
       $("#myselection option:selected").text() == "Frais"
     ) {
       $("#trtm").html("");
@@ -706,7 +706,7 @@ if ($("#id").html() == 10) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "100g/120g" &&
+      $("#mycalibre option:selected").text() == "100/120gr" &&
       $("#myselection option:selected").text() == "Surgelé"
     ) {
       $("#trtm").html("");
@@ -714,7 +714,7 @@ if ($("#id").html() == 10) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "150g/170g" &&
+      $("#mycalibre option:selected").text() == "150/170gr" &&
       $("#myselection option:selected").text() == "Surgelé"
     ) {
       $("#trtm").html("");
@@ -722,7 +722,7 @@ if ($("#id").html() == 10) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "170g/190g" &&
+      $("#mycalibre option:selected").text() == "170/190gr" &&
       $("#myselection option:selected").text() == "Surgelé"
     ) {
       $("#trtm").html("");
@@ -739,7 +739,7 @@ if ($("#id").html() == 10) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -751,7 +751,7 @@ if ($("#id").html() == 10) {
 if ($("#id").html() == 11) {
   $(document).change(function () {
     if (
-      $("#mycalibre option:selected").text() == "700/1200" &&
+      $("#mycalibre option:selected").text() == "700/1200gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -759,7 +759,7 @@ if ($("#id").html() == 11) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1200" &&
+      $("#mycalibre option:selected").text() == "1200gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
@@ -767,7 +767,7 @@ if ($("#id").html() == 11) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "700/1200" &&
+      $("#mycalibre option:selected").text() == "700/1200gr" &&
       $("#myselection option:selected").text() == "Filet"
     ) {
       $("#trtm").html("");
@@ -775,7 +775,7 @@ if ($("#id").html() == 11) {
 
       $("#myselection").css("border", "1px solid black");
     } else if (
-      $("#mycalibre option:selected").text() == "1200" &&
+      $("#mycalibre option:selected").text() == "1200gr" &&
       $("#myselection option:selected").text() == "Filet"
     ) {
       $("#trtm").html("");
@@ -792,7 +792,7 @@ if ($("#id").html() == 11) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -803,12 +803,12 @@ if ($("#id").html() == 11) {
 
 if ($("#id").html() == 12) {
   $(document).change(function () {
-    if ($("#mycalibre option:selected").text() == "300/1500") {
+    if ($("#mycalibre option:selected").text() == "300/1500gr") {
       $("#trtm").html("");
       $("svg").hide();
 
       $("#myselection").css("border", "1px solid black");
-    } else if ($("#mycalibre option:selected").text() == "1500") {
+    } else if ($("#mycalibre option:selected").text() == "1500gr") {
       $("#trtm").html("");
       $("svg").hide();
 
@@ -823,7 +823,7 @@ if ($("#id").html() == 12) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
@@ -875,7 +875,7 @@ if ($("#id").html() == 13) {
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
-      $("#trtm").html(" : n'existe plus cette option");
+      $("#trtm").html(" : Cet élément N'éxiste plus");
 
       $("#myselection").css("border", "2px red solid");
     }
