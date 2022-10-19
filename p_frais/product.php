@@ -9,7 +9,7 @@ $sql = "SELECT * FROM p_frait WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
-
+<script src="../p_frais/assests/traitments.js" defer></script>
 <section>
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
     <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
@@ -28,9 +28,9 @@ $featured = mysqli_query($conn, $sql);
         </div>
 
         <div class="sticky top-0">
-          <strong class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600">
+          <!-- <strong class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600">
             ******
-          </strong>
+          </strong> -->
 
           <div class="mt-8 flex justify-left">
             <div class="max-w-[55ch]">
@@ -76,7 +76,7 @@ $featured = mysqli_query($conn, $sql);
             </details> -->
 
           <form class="mt-8">
-            <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4']) {
+            <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4'] && !$product['c5']) {
                         echo "hidden";
                       } ?>>
               <legend class="mb-3 text-md font-medium">Calibre :</legend>
@@ -87,7 +87,7 @@ $featured = mysqli_query($conn, $sql);
 
                   <select id="mycalibre" class="relative w-full rounded-lg  p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
 
-                    <option value="" selected>Choisir une option </option>
+                    <option value="" selected>Choisir une option</option>
 
                     <option value="2" <?php if (!($product['c1'])) {
                                         echo "hidden";
@@ -101,7 +101,7 @@ $featured = mysqli_query($conn, $sql);
                     <option value="5" <?php if (!($product['c4'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c4']; ?></option>
-                    <option value="5" <?php if (!($product['c5'])) {
+                    <option value="6" <?php if (!($product['c5'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c5']; ?></option>
 
@@ -112,7 +112,7 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </fieldset>
 
-            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4']) {
+            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4'] && !$product['t5'] && !$product['t6']) {
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-md font-medium">
@@ -122,7 +122,7 @@ $featured = mysqli_query($conn, $sql);
               <div class="flow-root">
                 <div class="-m-0.5 flex flex-wrap">
                   <select id="myselection" class="relative w-full rounded-lg  p-2.5 text-sm focus:z-10">
-                    <option value="" selected>Choisir une option </option>
+                    <option value="" selected>Choisir une option</option>
                     <option value="2" <?php if (!($product['t1'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t1']; ?></option>
@@ -135,14 +135,14 @@ $featured = mysqli_query($conn, $sql);
                     <option value="5" <?php if (!($product['t4'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t4']; ?></option>
-                    <option value="5" <?php if (!($product['t5'])) {
+                    <option value="6" <?php if (!($product['t5'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t5']; ?></option>
+                    <option value="7" <?php if (!($product['t6'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t6']; ?></option>
                   </select>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 interdit">
-                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                    <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-                  </svg>
+
                   <script>
                     if (($('#id').html() == 5)) {
                       $('#myselection').change(function() {
@@ -161,7 +161,10 @@ $featured = mysqli_query($conn, $sql);
             </fieldset>
 
             <div class="flex justify-center align-center my-5">
-              <span id="trtm" class="text-2xl font-bold text-red-600 capitalize"></span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 hidden mr-1" id="svg">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z" />
+              </svg><span id="trtm" class="text-xl font-bold text-red-600 capitalize"></span>
             </div>
 
             <div class="mt-8 flex">

@@ -12,15 +12,16 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-    <!-- Main Style -->
-    <link rel="stylesheet" href="../p_frais/assests/style.css" />
+
     <!-- Javascript -->
-    <script src="../inc/script.js" defer></script>
-    <script src="../p_frais/assests/traitments.js" defer></script>
+    <script src="../script.js" defer></script>
+
+
     <!-- Font-Awesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <!-- Airplane JS -->
-    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="../style.css">
     <title>Pesca Samac</title>
 </head>
 

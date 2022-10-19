@@ -223,3 +223,11 @@ cite {
     transform: rotate(-90deg) scale(0);
   }
 }
+
+span {
+  font-family: "Noto Serif", serif;
+}
+
+#mycalibre {
+  border: 1px solid black;
+}

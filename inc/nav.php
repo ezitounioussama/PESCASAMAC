@@ -3,6 +3,29 @@
         Frais de livraison offerts au-dessus de 500DH de commande.
     </p>
 </div>
+
+<div class="share-container floating">
+    <ul class="share-link">
+        <li>
+            <img src="../img/phone.svg" alt="phone" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="tel:+212663628206" class="capitalize">Appelez-nous</a>
+        </li>
+        <li>
+            <img src="../img/whatsapp.svg" class="w-6 h-6" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://wa.me/212663628206?text=Just%20a%20test" target="_blank" class="capitalize">Whatsapp</a>
+        </li>
+        <li>
+            <img src="../img/email.svg" alt="mail" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:Pesca.Samac@gmail.com" class="capitalize">Envoyez nous un message</a>&nbsp
+        </li>
+    </ul>
+    <div class="social-link">
+        <img class="send" src="https://i.postimg.cc/CMfVgsSQ/send.png" alt="send" />
+        <img class="close" src="https://i.postimg.cc/LsCMHyJr/close.png" alt="close" />
+    </div>
+</div>
+
 <!-- NAVBAR -->
 
 <header class="border-b border-gray-100 body_font">
@@ -25,7 +48,7 @@
                     P.frais
                 </a>
 
-                <a href="#P.congeles" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                <a href="../p_congele/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     P.congelés
                 </a>
 
@@ -80,7 +103,7 @@
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../p_frais/home.php">P.frais</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#P.Congeles">P.Congeles</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../p_congele/home.php">P.Congeles</a>
                     </li>
 
                     <li class="mb-1">
