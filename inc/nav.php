@@ -51,7 +51,9 @@
                 <a href="../p_congele/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     P.congelés
                 </a>
-
+                <a href="../accompagnement/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                    Accompagnement
+                </a>
                 <a href="#Saumons" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     Saumons
                 </a>
@@ -105,7 +107,9 @@
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../p_congele/home.php">P.Congeles</a>
                     </li>
-
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../accompagnement/home.php">Accompagnement</a>
+                    </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Sumons">Sumons</a>
                     </li>
