@@ -76,7 +76,7 @@ $featured = mysqli_query($conn, $sql);
             </details> -->
 
           <form class="mt-8">
-            <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4'] && !$product['c5']) {
+            <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
               <legend class="mb-3 text-md font-medium">Calibre :</legend>
@@ -95,15 +95,7 @@ $featured = mysqli_query($conn, $sql);
                     <option value="3" <?php if (!($product['c2'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c2']; ?></option>
-                    <option value="4" <?php if (!($product['c3'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c3']; ?></option>
-                    <option value="5" <?php if (!($product['c4'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c4']; ?></option>
-                    <option value="6" <?php if (!($product['c5'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c5']; ?></option>
+
 
                   </select>
 
@@ -112,7 +104,7 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </fieldset>
 
-            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4'] && !$product['t5'] && !$product['t6']) {
+            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2']) {
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-md font-medium">
@@ -129,18 +121,7 @@ $featured = mysqli_query($conn, $sql);
                     <option value="3" <?php if (!($product['t2'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t2']; ?></option>
-                    <option value="4" <?php if (!($product['t3'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t3']; ?></option>
-                    <option value="5" <?php if (!($product['t4'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t4']; ?></option>
-                    <option value="6" <?php if (!($product['t5'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t5']; ?></option>
-                    <option value="7" <?php if (!($product['t6'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t6']; ?></option>
+
                   </select>
 
                   <script>

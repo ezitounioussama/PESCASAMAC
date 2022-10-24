@@ -2,7 +2,7 @@
 include("../inc/db.php");
 $db = $conn;
 $tableName = "p_congele";
-$columns = ['id', 'name', 'pic', 'c1', 'c2', 'c3', 'c4', 'c5', 't1', 't2', 't3', 't4', 't5', 't6'];
+$columns = ['id', 'name', 'pic', 'c1', 'c2', 't1', 't2'];
 $fetchData = fetch_data($db, $tableName, $columns);
 function fetch_data($db, $tableName, $columns)
 {

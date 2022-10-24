@@ -1,6 +1,8 @@
 <?php
 require_once('inc_Pcongele/header.php');
 require_once('inc_Pcongele/nav.php');
+
+
 ?>
 
 
@@ -8,62 +10,7 @@ require_once('inc_Pcongele/nav.php');
 
 
 <div class="container-fluid py-4 px-5">
-    <form>
-        <!-- 2 column grid layout with text inputs for the first and last names -->
-        <div class="row mb-4">
-            <div class="col">
-                <div class="form-outline">
-                    <input type="text" id="form6Example1" class="form-control" />
-                    <label class="form-label" for="form6Example1">First name</label>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-outline">
-                    <input type="text" id="form6Example2" class="form-control" />
-                    <label class="form-label" for="form6Example2">Last name</label>
-                </div>
-            </div>
-        </div>
 
-        <!-- Text input -->
-        <div class="form-outline mb-4">
-            <input type="text" id="form6Example3" class="form-control" />
-            <label class="form-label" for="form6Example3">Company name</label>
-        </div>
-
-        <!-- Text input -->
-        <div class="form-outline mb-4">
-            <input type="text" id="form6Example4" class="form-control" />
-            <label class="form-label" for="form6Example4">Address</label>
-        </div>
-
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <input type="email" id="form6Example5" class="form-control" />
-            <label class="form-label" for="form6Example5">Email</label>
-        </div>
-
-        <!-- Number input -->
-        <div class="form-outline mb-4">
-            <input type="number" id="form6Example6" class="form-control" />
-            <label class="form-label" for="form6Example6">Phone</label>
-        </div>
-
-        <!-- Message input -->
-        <div class="form-outline mb-4">
-            <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-            <label class="form-label" for="form6Example7">Additional information</label>
-        </div>
-
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-            <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked />
-            <label class="form-check-label" for="form6Example8"> Create an account? </label>
-        </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
-    </form>
     <div class="row">
         <div class="col-12">
             <div class="card border shadow-xs mb-4">
@@ -72,7 +19,7 @@ require_once('inc_Pcongele/nav.php');
 
                         <div class="ms-auto d-flex">
 
-                            <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
+                            <button type="button" data-mdb-toggle="modal" data-mdb-target="#exampleModal" class="btn btn-sm btn-dark btn-icon d-flex align-items-center me-2">
                                 <span class="btn-inner--icon">
                                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="d-block me-2">
                                         <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
@@ -80,6 +27,129 @@ require_once('inc_Pcongele/nav.php');
                                 </span>
                                 <span class="btn-inner--text">Add Something</span>
                             </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Insert the new product data</h5>
+                                            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <!-- 2 column grid layout with text inputs for the first and last names -->
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="name" name="name" class="form-control" />
+                                                            <label class="form-label" for="name">name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="pic" name="pic" class="form-control" />
+                                                            <label class="form-label" for="pic">pic</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Text input -->
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="c1" name="c1" class="form-control" />
+                                                            <label class="form-label" for="c1">c1</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="c2" name="c2" class="form-control" />
+                                                            <label class="form-label" for="c2">c2</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Text input -->
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="c3" name="c3" class="form-control" />
+                                                            <label class="form-label" for="c3">c3</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="c4" name="c4" class="form-control" />
+                                                            <label class="form-label" for="c4">c4</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- text input -->
+                                                <div class="form-outline mb-4">
+                                                    <input type="text" id="c5" name="c5" class="form-control" />
+                                                    <label class="form-label" for="c5">c5</label>
+                                                </div>
+
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t1" name="t1" class="form-control" />
+                                                            <label class="form-label" for="t1">t1</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t2" name="t2" class="form-control" />
+                                                            <label class="form-label" for="t2">t2</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Text input -->
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t3" name="t3" class="form-control" />
+                                                            <label class="form-label" for="t3">t3</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t4" name="t4" class="form-control" />
+                                                            <label class="form-label" for="t4">t4</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- Text input -->
+                                                <div class="row mb-4">
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t5" name="t5" class="form-control" />
+                                                            <label class="form-label" for="t5">t5</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="t6" name="t6" class="form-control" />
+                                                            <label class="form-label" for="t6">t6</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">ADD</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,49 +165,74 @@ require_once('inc_Pcongele/nav.php');
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
                     </div>
+                    <?php
+
+                    include "db/config.php";
+
+                    $sql = "SELECT * FROM p_congele";
+
+                    $result = $conn->query($sql);
+
+                    ?>
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
                             <thead class="bg-gray-100">
                                 <tr>
-                                    <th class="text-secondary text-xs font-weight-semibold opacity-7">Member</th>
-                                    <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Function</th>
-                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Status</th>
-                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Employed</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-7">Name</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Calibre 1</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Calibre 2</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 1</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 2</th>
+
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-flex px-2 py-1">
-                                            <div class="d-flex align-items-center">
-                                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user1">
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center ms-1">
-                                                <h6 class="mb-0 text-sm font-weight-semibold">John Michael</h6>
-                                                <p class="text-sm text-secondary mb-0">john@creative-tim.com</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="text-sm text-dark font-weight-semibold mb-0">Manager</p>
-                                        <p class="text-sm text-secondary mb-0">Organization</p>
-                                    </td>
-                                    <td class="align-middle text-center text-sm">
-                                        <span class="badge badge-sm border border-success text-success bg-success">Online</span>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span class="text-secondary text-sm font-weight-normal">23/04/18</span>
-                                    </td>
-                                    <td class="align-middle">
-                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit user">
-                                            <svg width="14" height="14" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.2201 2.02495C10.8292 1.63482 10.196 1.63545 9.80585 2.02636C9.41572 2.41727 9.41635 3.05044 9.80726 3.44057L11.2201 2.02495ZM12.5572 6.18502C12.9481 6.57516 13.5813 6.57453 13.9714 6.18362C14.3615 5.79271 14.3609 5.15954 13.97 4.7694L12.5572 6.18502ZM11.6803 1.56839L12.3867 2.2762L12.3867 2.27619L11.6803 1.56839ZM14.4302 4.31284L15.1367 5.02065L15.1367 5.02064L14.4302 4.31284ZM3.72198 15V16C3.98686 16 4.24091 15.8949 4.42839 15.7078L3.72198 15ZM0.999756 15H-0.000244141C-0.000244141 15.5523 0.447471 16 0.999756 16L0.999756 15ZM0.999756 12.2279L0.293346 11.5201C0.105383 11.7077 -0.000244141 11.9624 -0.000244141 12.2279H0.999756ZM9.80726 3.44057L12.5572 6.18502L13.97 4.7694L11.2201 2.02495L9.80726 3.44057ZM12.3867 2.27619C12.7557 1.90794 13.3549 1.90794 13.7238 2.27619L15.1367 0.860593C13.9869 -0.286864 12.1236 -0.286864 10.9739 0.860593L12.3867 2.27619ZM13.7238 2.27619C14.0917 2.64337 14.0917 3.23787 13.7238 3.60504L15.1367 5.02064C16.2875 3.8721 16.2875 2.00913 15.1367 0.860593L13.7238 2.27619ZM13.7238 3.60504L3.01557 14.2922L4.42839 15.7078L15.1367 5.02065L13.7238 3.60504ZM3.72198 14H0.999756V16H3.72198V14ZM1.99976 15V12.2279H-0.000244141V15H1.99976ZM1.70617 12.9357L12.3867 2.2762L10.9739 0.86059L0.293346 11.5201L1.70617 12.9357Z" fill="#64748B" />
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
 
+                                <?php
+
+                                if ($result->num_rows > 0) {
+
+                                    while ($row = $result->fetch_assoc()) {
+
+                                ?>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../p_congele/img/<?php echo $row['pic']; ?>" class="avatar avatar-sm rounded-circle me-2" alt="user1">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                                        <h6 class="mb-0 text-sm font-weight-semibold"><?php echo $row['name']; ?></h6>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-center text-lg">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c1']; ?></span>
+
+                                            </td>
+                                            <td class="align-middle text-center text-lg">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c2']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t1']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t2']; ?></span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <a href=' inc_Pcongele/update.php?id=<?php echo $row["id"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit user">
+                                                    <svg width="14" height="14" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11.2201 2.02495C10.8292 1.63482 10.196 1.63545 9.80585 2.02636C9.41572 2.41727 9.41635 3.05044 9.80726 3.44057L11.2201 2.02495ZM12.5572 6.18502C12.9481 6.57516 13.5813 6.57453 13.9714 6.18362C14.3615 5.79271 14.3609 5.15954 13.97 4.7694L12.5572 6.18502ZM11.6803 1.56839L12.3867 2.2762L12.3867 2.27619L11.6803 1.56839ZM14.4302 4.31284L15.1367 5.02065L15.1367 5.02064L14.4302 4.31284ZM3.72198 15V16C3.98686 16 4.24091 15.8949 4.42839 15.7078L3.72198 15ZM0.999756 15H-0.000244141C-0.000244141 15.5523 0.447471 16 0.999756 16L0.999756 15ZM0.999756 12.2279L0.293346 11.5201C0.105383 11.7077 -0.000244141 11.9624 -0.000244141 12.2279H0.999756ZM9.80726 3.44057L12.5572 6.18502L13.97 4.7694L11.2201 2.02495L9.80726 3.44057ZM12.3867 2.27619C12.7557 1.90794 13.3549 1.90794 13.7238 2.27619L15.1367 0.860593C13.9869 -0.286864 12.1236 -0.286864 10.9739 0.860593L12.3867 2.27619ZM13.7238 2.27619C14.0917 2.64337 14.0917 3.23787 13.7238 3.60504L15.1367 5.02064C16.2875 3.8721 16.2875 2.00913 15.1367 0.860593L13.7238 2.27619ZM13.7238 3.60504L3.01557 14.2922L4.42839 15.7078L15.1367 5.02065L13.7238 3.60504ZM3.72198 14H0.999756V16H3.72198V14ZM1.99976 15V12.2279H-0.000244141V15H1.99976ZM1.70617 12.9357L12.3867 2.2762L10.9739 0.86059L0.293346 11.5201L1.70617 12.9357Z" fill="#64748B" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                <?php       }
+                                }
+
+                                ?>
                             </tbody>
                         </table>
                     </div>
