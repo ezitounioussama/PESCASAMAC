@@ -79,7 +79,7 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4'] && !$product['c5']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-md font-medium">Calibre :</legend>
+              <legend class="mb-3 text-xl font-medium">Calibre :</legend>
 
               <div class="flow-root">
 
@@ -115,7 +115,7 @@ $featured = mysqli_query($conn, $sql);
             <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4'] && !$product['t5'] && !$product['t6']) {
                                       echo "hidden";
                                     } ?>>
-              <legend class="mb-3 text-md font-medium">
+              <legend class="mb-3 text-xl font-medium">
                 Choisissez le traitement :
               </legend>
 

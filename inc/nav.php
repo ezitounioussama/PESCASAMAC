@@ -58,7 +58,7 @@
                     Saumons
                 </a>
 
-                <a href="#Fruit" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                <a href="../fruitDeMer/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     Fruit de mer
                 </a>
                 <a href="#Contact" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
@@ -114,7 +114,7 @@
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Sumons">Sumons</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Fruit">Fruit de mer</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../fruitDeMer/home.php">Fruit de mer</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Contact">Contactez Nous</a>

@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-include "config.php"; 
+include "config.php";
 
 if (isset($_GET['id'])) {
 
@@ -8,16 +8,13 @@ if (isset($_GET['id'])) {
 
     $sql = "DELETE FROM `p_congele` WHERE `id`='$id'";
 
-     $result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-     if ($result == TRUE) {
+    if ($result == TRUE) {
 
         echo "Record deleted successfully.";
-
-    }else{
+    } else {
 
         echo "Error:" . $sql . "<br>" . $conn->error;
-
     }
-
 }

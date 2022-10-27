@@ -79,7 +79,7 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-md font-medium">Conditionnement :</legend>
+              <legend class="mb-3 text-xl font-medium">Conditionnement :</legend>
 
               <div class="flow-root">
 

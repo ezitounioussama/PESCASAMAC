@@ -79,7 +79,7 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4'] && !$product['c5']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-md font-medium">Calibre :</legend>
+              <legend class="mb-3 text-xl font-medium">Taille :</legend>
 
               <div class="flow-root">
 

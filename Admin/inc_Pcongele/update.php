@@ -23,7 +23,7 @@
         include "../db/config.php";
         $id = $_GET['id'];
 
-        $sql = "SELECT * FROM `p_congele` WHERE `id`='$id'";
+        $sql = "SELECT * FROM `test` WHERE `id`='$id'";
 
         $result = $conn->query($sql);
 
