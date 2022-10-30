@@ -5,11 +5,11 @@ require_once('../inc/db.php');
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM chairAraignee WHERE id = '$id'";
+$sql = "SELECT * FROM crustaces WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
-<script src="../chair_araignee/assests/traitments.js" defer></script>
+<script src="../crustaces/assests/traitments.js" defer></script>
 <section>
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
     <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
@@ -104,30 +104,7 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </fieldset>
 
-            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2']) {
-                                      echo "hidden";
-                                    } ?>>
-              <legend class="mb-3 text-xl font-medium">
-                Choisissez le traitement :
-              </legend>
 
-              <div class="flow-root">
-                <div class="-m-0.5 flex flex-wrap">
-                  <select id="myselection" class="relative w-full rounded-lg  p-2.5 text-sm focus:z-10">
-                    <option value="" selected>Choisir une option</option>
-                    <option value="2" <?php if (!($product['t1'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t1']; ?></option>
-                    <option value="3" <?php if (!($product['t2'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['t2']; ?></option>
-
-                  </select>
-
-
-                </div>
-              </div>
-            </fieldset>
 
             <div class="flex justify-center align-center my-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 hidden mr-1" id="svg">

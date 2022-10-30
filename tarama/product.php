@@ -5,11 +5,11 @@ require_once('../inc/db.php');
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM chairAraignee WHERE id = '$id'";
+$sql = "SELECT * FROM tarama WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
-<script src="../chair_araignee/assests/traitments.js" defer></script>
+<script src="../tarama/assests/traitments.js" defer></script>
 <section>
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
     <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
@@ -79,7 +79,7 @@ $featured = mysqli_query($conn, $sql);
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-xl font-medium">Calibre :</legend>
+              <legend class="mb-3 text-xl font-medium">Conditionnement :</legend>
 
               <div class="flow-root">
 
@@ -96,7 +96,6 @@ $featured = mysqli_query($conn, $sql);
                                         echo "hidden";
                                       } ?>><?= $product['c2']; ?></option>
 
-
                   </select>
 
 
@@ -104,11 +103,11 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </fieldset>
 
-            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2']) {
+            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4']) {
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-xl font-medium">
-                Choisissez le traitement :
+                Les types de tarama :
               </legend>
 
               <div class="flow-root">
@@ -121,6 +120,12 @@ $featured = mysqli_query($conn, $sql);
                     <option value="3" <?php if (!($product['t2'])) {
                                         echo "hidden";
                                       } ?>><?= $product['t2']; ?></option>
+                    <option value="4" <?php if (!($product['t3'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t3']; ?></option>
+                    <option value="5" <?php if (!($product['t4'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t4']; ?></option>
 
                   </select>
 
