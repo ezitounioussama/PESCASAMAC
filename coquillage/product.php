@@ -5,11 +5,11 @@ require_once('../inc/db.php');
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM F_mer WHERE id = '$id'";
+$sql = "SELECT * FROM coquillage WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
-<script src="../fruitDeMer/assests/traitments.js" defer></script>
+<script src="../coquillage/assests/traitments.js" defer></script>
 <section>
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
     <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
@@ -76,10 +76,10 @@ $featured = mysqli_query($conn, $sql);
             </details> -->
 
           <form class="mt-8">
-            <fieldset <?php if (!$product['c1'] && !$product['c2'] && !$product['c3'] && !$product['c4'] && !$product['c5']) {
+            <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
-              <legend class="mb-3 text-xl font-medium" id="legend"></legend>
+              <legend class="mb-3 text-xl font-medium">Calibre :</legend>
 
               <div class="flow-root">
 
@@ -95,15 +95,7 @@ $featured = mysqli_query($conn, $sql);
                     <option value="3" <?php if (!($product['c2'])) {
                                         echo "hidden";
                                       } ?>><?= $product['c2']; ?></option>
-                    <option value="4" <?php if (!($product['c3'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c3']; ?></option>
-                    <option value="5" <?php if (!($product['c4'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c4']; ?></option>
-                    <option value="6" <?php if (!($product['c5'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c5']; ?></option>
+
 
                   </select>
 
@@ -112,7 +104,42 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </fieldset>
 
+            <fieldset class="mt-8" <?php if (!$product['t1'] && !$product['t2']) {
+                                      echo "hidden";
+                                    } ?>>
+              <legend class="mb-3 text-xl font-medium">
+                Choisissez le traitement :
+              </legend>
 
+              <div class="flow-root">
+                <div class="-m-0.5 flex flex-wrap">
+                  <select id="myselection" class="relative w-full rounded-lg  p-2.5 text-sm focus:z-10">
+                    <option value="" selected>Choisir une option</option>
+                    <option value="2" <?php if (!($product['t1'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t1']; ?></option>
+                    <option value="3" <?php if (!($product['t2'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['t2']; ?></option>
+
+                  </select>
+
+                  <script>
+                    if (($('#id').html() == 2)) {
+                      $('#myselection').change(function() {
+                        if (($("#myselection option:selected").text() == "rouge") || ($("#myselection option:selected").text() == "Choisir une option")) {
+                          $('#myIMG').attr('src', "img/<?= $product['pic']; ?>");
+                        } else {
+                          $('#myIMG').attr('src', "img/surimiOrange.png");
+                        }
+                      })
+
+
+                    }
+                  </script>
+                </div>
+              </div>
+            </fieldset>
 
             <div class="flex justify-center align-center my-5">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 hidden mr-1" id="svg">
