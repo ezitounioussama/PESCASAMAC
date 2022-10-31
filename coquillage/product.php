@@ -108,7 +108,7 @@ $featured = mysqli_query($conn, $sql);
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-xl font-medium">
-                Choisissez le traitement :
+                Choisissez le conditionnement :
               </legend>
 
               <div class="flow-root">
