@@ -75,7 +75,8 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </details> -->
 
-          <form class="mt-8">
+          <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+            <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
@@ -116,17 +117,31 @@ $featured = mysqli_query($conn, $sql);
               <div>
                 <label for="quantity" class="sr-only">Qty</label>
 
-                <input type="number" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
+                <input name="qty" type="number" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
               </div>
 
-              <button type="submit" class="ml-3 block capitalize rounded bg-blue-700 px-5 py-3 text-xs font-medium text-white hover:bg-blue-600">
+              <button type="submit" name="add" class="ml-3 block capitalize rounded bg-blue-700 px-5 py-3 text-xs font-medium text-white hover:bg-blue-600">
                 Ajouter au panier
               </button>
             </div>
           </form>
         </div>
       <?php endwhile ?>
+      <?php
 
+      if (isset($_GET["add"])) {
+        $product_name = $_GET["product_name"];
+        $qte = $_GET["qty"];
+        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`) VALUES ('$product_name',12,$qte)";
+        if (mysqli_query($conn, $sql)) {
+          echo "New record created successfully";
+        } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+
+        mysqli_close($conn);
+      }
+      ?>
     </div>
   </div>
 </section>
