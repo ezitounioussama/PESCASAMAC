@@ -3,7 +3,7 @@ require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('../inc/db.php');
 
-$id = $_GET['id'];
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 
 $sql = "SELECT * FROM accompagnement WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
@@ -75,7 +75,7 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </details> -->
 
-          <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+          <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
@@ -127,17 +127,28 @@ $featured = mysqli_query($conn, $sql);
           </form>
         </div>
       <?php endwhile ?>
+
       <?php
 
-      if (isset($_GET["add"])) {
-        $product_name = $_GET["product_name"];
-        $qte = $_GET["qty"];
+      if (isset($_POST["add"])) {
+        $product_name = $_POST["product_name"];
+        $qte = $_POST["qty"];
         $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`) VALUES ('$product_name',12,$qte)";
-        if (mysqli_query($conn, $sql)) {
-          echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+        if (mysqli_query($conn, $sql)) { ?>
+          <script>
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.success('Record Added successfully');
+            location.replace("home.php");
+          </script>
+        <?php
+
+        } else { ?>
+          <script>
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.error('Record already in cart');
+            location.replace("home.php");
+          </script>
+      <?php }
 
         mysqli_close($conn);
       }
