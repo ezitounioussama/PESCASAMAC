@@ -130,9 +130,9 @@ $featured = mysqli_query($conn, $sql);
                     if (($('#id').html() == 2)) {
                       $('#myselection').change(function() {
                         if (($("#myselection option:selected").text() == "rouge") || ($("#myselection option:selected").text() == "Choisir une option")) {
-                          $('#myIMG').attr('src', "img/<?= $product['pic']; ?>");
+                          $('#myIMG').attr('src', "../img/<?= $product['pic']; ?>");
                         } else {
-                          $('#myIMG').attr('src', "img/surimiOrange.png");
+                          $('#myIMG').attr('src', "../img/surimiOrange.png");
                         }
                       })
 

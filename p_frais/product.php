@@ -38,8 +38,8 @@ $featured = mysqli_query($conn, $sql);
             </div>
           </div>
 
-          <details class="group relative mt-4">
-            <summary class="block">
+          <div class="group relative mt-4">
+            <div class="block">
               <div>
                 <div class="prose max-w-none group-open:hidden">
                   <p>
@@ -51,7 +51,7 @@ $featured = mysqli_query($conn, $sql);
                   Read More
                 </span> -->
               </div>
-            </summary>
+            </div>
 
             <!-- <div class="prose max-w-none pb-6">
               <p>
@@ -68,7 +68,7 @@ $featured = mysqli_query($conn, $sql);
                 Maxime et quisquam amet. A, deserunt!
               </p>
             </div> -->
-          </details>
+          </div>
 
           <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
@@ -144,9 +144,9 @@ $featured = mysqli_query($conn, $sql);
                     if (($('#id').html() == 5)) {
                       $('#myselection').change(function() {
                         if ($("#myselection option:selected").text() == "Entier") {
-                          $('#myIMG').attr('src', "img/<?= $product['pic']; ?>");
+                          $('#myIMG').attr('src', "../img/<?= $product['pic']; ?>");
                         } else {
-                          $('#myIMG').attr('src', "img/Espadon en longe.jpg");
+                          $('#myIMG').attr('src', "../img/Espadon en longe.jpg");
                         }
                       })
 
@@ -158,7 +158,7 @@ $featured = mysqli_query($conn, $sql);
             </fieldset>
 
             <div class="flex justify-center align-center my-5">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 hidden mr-1" id="svg">
+              <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-7 h-7 fill-red-600 hidden mr-1" id="svg">
                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                 <path d="M367.2 412.5L99.5 144.8C77.1 176.1 64 214.5 64 256c0 106 86 192 192 192c41.5 0 79.9-13.1 111.2-35.5zm45.3-45.3C434.9 335.9 448 297.5 448 256c0-106-86-192-192-192c-41.5 0-79.9 13.1-111.2 35.5L412.5 367.2zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z" />
               </svg><span id="trtm" class="text-xl font-bold text-red-600 capitalize"></span>

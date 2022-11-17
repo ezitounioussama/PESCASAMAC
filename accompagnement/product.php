@@ -80,6 +80,42 @@ $featured = mysqli_query($conn, $sql);
           <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
             <input class="hidden" type="text" name="pic" id="product_name" value="../img/<?= $product['pic']; ?>">
+
+            <fieldset class="mb-5" <?php if (!$product['d1'] && !$product['d2'] && !$product['d3'] && !$product['d4']) {
+                                      echo "hidden";
+                                    } ?>>
+              <legend class="mb-3 text-xl font-medium">Disponibilité :</legend>
+
+              <div class="flow-root">
+
+                <div class="-m-0.5 flex flex-wrap justify-right">
+
+                  <select id="mycalibre" class="relative w-full rounded-lg  p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
+
+                    <option value="" selected>Choisir une option</option>
+
+                    <option value="2" <?php if (!($product['d1'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['d1']; ?></option>
+                    <option value="3" <?php if (!($product['d2'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['d2']; ?></option>
+                    <option value="4" <?php if (!($product['d3'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['d3']; ?></option>
+                    <option value="5" <?php if (!($product['d4'])) {
+                                        echo "hidden";
+                                      } ?>><?= $product['d4']; ?></option>
+
+
+                  </select>
+
+
+                </div>
+              </div>
+            </fieldset>
+
+
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>

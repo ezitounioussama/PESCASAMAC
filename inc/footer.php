@@ -15,6 +15,7 @@
         </div>
     </div>
 </footer>
+<script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
 <script>
     // Burger menus
     document.addEventListener("DOMContentLoaded", function() {

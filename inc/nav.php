@@ -32,9 +32,10 @@
     <div class="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
         <div class="flex items-center">
             <button type="button" class="navbar-burger p-2 sm:mr-4 lg:hidden">
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                </svg> -->
+                <img src="../img/hamburger.png" alt="navbar" class="h-6 w-6">
             </button>
 
             <a href="../" class="flex">
@@ -91,20 +92,9 @@
                         } else {
                             $msg = "<div class='items-center sm:flex'>
                             <span
-                              class='inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-400 text-white'
+                              class='inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-white mb-3'
                             >
-                              <svg
-                                class='h-3 w-3'
-                                fill='currentColor'
-                                viewbox='0 0 20 20'
-                                xmlns='http://www.w3.org/2000/svg'
-                              >
-                                <path
-                                  clip-rule='evenodd'
-                                  d='M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z'
-                                  fill-rule='evenodd'
-                                />
-                              </svg>
+                              <img src='../img/empty-cart.png' alt='empty-cart' class='h-8 w-8'/>
                             </span>
                         
                             <p class='mt-3 text-lg font-medium sm:mt-0 sm:ml-3'>
@@ -129,9 +119,10 @@
                         <div class="absolute inline-block top-0 right-0 bottom-auto left-auto translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 p-2.5 text-xs bg-blue-500 rounded-full z-10"></div>
                         <div class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
                             <div>
-                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                </svg>
+                                </svg> -->
+                                <img src="../img/carts.png" alt="cart" class="h-4 w-4">
                             </div>
                     </button>
 
@@ -195,7 +186,7 @@
                                     ?>
                                     <div class='space-y-4 text-center'>
                                         <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
-                                            Total :
+                                            Total : <span class="text-md font-bold">0</span>
                                         </p>
                                     </div>
                                     <!-- end of products -->
@@ -237,6 +228,7 @@
                     <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
+
                 </button>
             </div>
             <div>
