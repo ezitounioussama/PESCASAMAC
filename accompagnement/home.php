@@ -26,7 +26,7 @@ require_once('inc/fetchData.php');
           ?>
               <a href='<?php echo "product.php?id=" . $data["id"]; ?>' class="relative block bg-white">
 
-                <img alt="<?php echo $data['name']; ?>" src="img/<?php echo $data['pic']; ?>" class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-72" />
+                <img alt="<?php echo $data['name']; ?>" src="../img/<?php echo $data['pic']; ?>" class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-72" />
                 <div class="p-6">
 
 

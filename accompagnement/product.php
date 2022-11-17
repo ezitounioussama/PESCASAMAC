@@ -11,12 +11,14 @@ $featured = mysqli_query($conn, $sql);
 ?>
 <script src="../accompagnement/assests/traitments.js" defer></script>
 <section>
+
+
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
     <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
       <?php while ($product = mysqli_fetch_assoc($featured)) : ?>
         <span class="hidden" id="id"><?= $product['id']; ?></span>
         <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
-          <img alt="<?= $product['name']; ?>" src="img/<?= $product['pic']; ?>" class="aspect-square w-full rounded-xl object-cover" id="myIMG" />
+          <img alt="<?= $product['name']; ?>" src="../img/<?= $product['pic']; ?>" class="aspect-square w-full rounded-xl object-cover" id="myIMG" />
           <!-- <div class="grid grid-cols-2 gap-4 lg:mt-4">
             <img alt="Les Paul" src="../img/second.jpg" class="aspect-square w-full rounded-xl object-cover" id="altIMG" />
           </div> -->
@@ -77,6 +79,7 @@ $featured = mysqli_query($conn, $sql);
 
           <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
+            <input class="hidden" type="text" name="pic" id="product_name" value="../img/<?= $product['pic']; ?>">
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
@@ -128,33 +131,52 @@ $featured = mysqli_query($conn, $sql);
         </div>
       <?php endwhile ?>
 
-      <?php
 
-      if (isset($_POST["add"])) {
-        $product_name = $_POST["product_name"];
-        $qte = $_POST["qty"];
-        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`) VALUES ('$product_name',12,$qte)";
-        if (mysqli_query($conn, $sql)) { ?>
-          <script>
-            alertify.set('notifier', 'position', 'top-right');
-            alertify.success('Record Added successfully');
-            location.replace("home.php");
-          </script>
-        <?php
-
-        } else { ?>
-          <script>
-            alertify.set('notifier', 'position', 'top-right');
-            alertify.error('Record already in cart');
-            location.replace("home.php");
-          </script>
-      <?php }
-
-        mysqli_close($conn);
-      }
-      ?>
     </div>
   </div>
+  <?php
+
+  if (isset($_POST["add"])) {
+    $product_name = $_POST["product_name"];
+    $qte = $_POST["qty"];
+    $product_pic = $_POST["pic"];
+    $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`) VALUES ('$product_name',12,$qte ,'$product_pic')";
+    if (mysqli_query($conn, $sql)) { ?>
+      <script>
+        alertify.set('notifier', 'position', 'top-right');
+        alertify.success('Product Added successfully');
+        location.replace("home.php");
+      </script>
+    <?php
+
+    } else { ?>
+      <script>
+        alertify.set('notifier', 'position', 'top-right');
+        alertify.error('Product already in cart');
+      </script>
+  <?php echo "<div class='grid max-h-full place-content-center bg-white'>
+                    <div class='text-center'>
+                    <strong class='text-9xl font-black text-gray-200'>404</strong>
+
+          <h1 class='text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+            Uh-oh!
+          </h1>
+
+          
+
+          <a
+            href='home.php'
+            class='mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring'
+          >
+      Go Back Home
+    </a>
+  </div>
+</div>";
+    }
+
+    mysqli_close($conn);
+  }
+  ?>
 </section>
 
 <?php require_once('../inc/footer.php'); ?>

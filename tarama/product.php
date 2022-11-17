@@ -3,7 +3,7 @@ require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('../inc/db.php');
 
-$id = $_GET['id'];
+$id = isset($_GET['id']) ? $_GET['id'] : '';
 
 $sql = "SELECT * FROM tarama WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
@@ -16,7 +16,7 @@ $featured = mysqli_query($conn, $sql);
       <?php while ($product = mysqli_fetch_assoc($featured)) : ?>
         <span class="hidden" id="id"><?= $product['id']; ?></span>
         <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
-          <img alt="<?= $product['name']; ?>" src="img/<?= $product['pic']; ?>" class="aspect-square w-full rounded-xl object-cover" id="myIMG" />
+          <img alt="<?= $product['name']; ?>" src="../img/<?= $product['pic']; ?>" class="aspect-square w-full rounded-xl object-cover" id="myIMG" />
           <!-- <div class="grid grid-cols-2 gap-4 lg:mt-4">
             <img alt="Les Paul" src="../img/second.jpg" class="aspect-square w-full rounded-xl object-cover" id="altIMG" />
           </div> -->
@@ -75,7 +75,9 @@ $featured = mysqli_query($conn, $sql);
               </div>
             </details> -->
 
-          <form class="mt-8">
+          <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+            <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
+            <input class="hidden" type="text" name="pic" id="product_name" value="../img/<?= $product['pic']; ?>">
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
@@ -145,17 +147,59 @@ $featured = mysqli_query($conn, $sql);
               <div>
                 <label for="quantity" class="sr-only">Qty</label>
 
-                <input type="number" id="quantity" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
+                <input type="number" id="quantity" name="qty" min="1" value="1" class="w-12 rounded border-gray-200 py-3 text-center text-xs [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
               </div>
 
-              <button type="submit" class="ml-3 block capitalize rounded bg-blue-700 px-5 py-3 text-xs font-medium text-white hover:bg-blue-600">
+              <button type="submit" name="add" class="ml-3 block capitalize rounded bg-blue-700 px-5 py-3 text-xs font-medium text-white hover:bg-blue-600">
                 Ajouter au panier
               </button>
             </div>
           </form>
         </div>
       <?php endwhile ?>
+      <?php
 
+      if (isset($_POST["add"])) {
+        $product_name = $_POST["product_name"];
+        $qte = $_POST["qty"];
+        $product_pic = $_POST["pic"];
+        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`) VALUES ('$product_name',12,$qte ,'$product_pic')";
+        if (mysqli_query($conn, $sql)) { ?>
+          <script>
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.success('Product Added successfully');
+            location.replace("home.php");
+          </script>
+        <?php
+
+        } else { ?>
+          <script>
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.error('Product already in cart');
+          </script>
+      <?php echo "<div class='grid max-h-full place-content-center bg-white'>
+                    <div class='text-center'>
+                    <strong class='text-9xl font-black text-gray-200'>404</strong>
+
+          <h1 class='text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+            Uh-oh!
+          </h1>
+
+          
+
+          <a
+            href='home.php'
+            class='mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring'
+          >
+      Go Back Home
+    </a>
+  </div>
+</div>";
+        }
+
+        mysqli_close($conn);
+      }
+      ?>
     </div>
   </div>
 </section>

@@ -89,7 +89,28 @@
                             $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
                             $msg = $row;
                         } else {
-                            $msg = "No Data Found";
+                            $msg = "<div class='items-center sm:flex'>
+                            <span
+                              class='inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-400 text-white'
+                            >
+                              <svg
+                                class='h-3 w-3'
+                                fill='currentColor'
+                                viewbox='0 0 20 20'
+                                xmlns='http://www.w3.org/2000/svg'
+                              >
+                                <path
+                                  clip-rule='evenodd'
+                                  d='M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z'
+                                  fill-rule='evenodd'
+                                />
+                              </svg>
+                            </span>
+                        
+                            <p class='mt-3 text-lg font-medium sm:mt-0 sm:ml-3'>
+                              Cart is empty!
+                            </p>
+                          </div>";
                         }
                     } else {
                         $msg = mysqli_error($db);
@@ -119,8 +140,12 @@
                         <div class="modal-dialog relative w-auto pointer-events-none">
                             <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
                                 <div class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
-                                    <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalLabel">Cart</h5>
-                                    <button type="button" class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <!-- <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalLabel">Cart</h5> -->
+
+                                    <button type="button" class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                            <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+                                        </svg></button>
                                 </div>
                                 <div class="modal-body relative p-4">
                                     <!-- products in the cart -->
@@ -129,16 +154,16 @@
                                         $sn = 1;
                                         foreach ($fetch  as $data) {
                                     ?>
-                                            <div class="flex items-start pt-4 pb-4">
+                                            <div class="flex items-start pt-4 pb-4 ">
 
-                                                <!-- <img alt="Tee" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=830&q=80" class="h-16 w-16 rounded-lg border-2 border-black object-cover" /> -->
+                                                <img alt="<?php echo $data['name']; ?>" src="../img/<?php echo $data['pic']; ?>" class="h-16 w-16 rounded-lg border-2 border-black object-cover" />
 
                                                 <div class="ml-4">
                                                     <h3 class="text-sm"><?php echo $data['name']; ?></h3>
 
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500">
                                                         <div>
-                                                            <dt class="inline ">Price: <?php echo $data['price']; ?></dt>
+                                                            <dt class="inline ">Price: <?php echo $data['price']; ?> MAD</dt>
 
                                                         </div>
 
@@ -146,9 +171,16 @@
                                                             <dt class="inline">Qte :</dt>
                                                             <dd class="inline"><?php echo $data['quantity']; ?></dd>
                                                         </div>
+
                                                     </dl>
                                                 </div>
 
+                                                <!-- <a href="#" class="flex w-7 h-7 justify-center align-center ml-24">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> -->
+                                                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                <!-- <path d="M576 128c0-35.3-28.7-64-64-64H205.3c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7H512c35.3 0 64-28.7 64-64V128zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                                                    </svg>
+                                                </a> -->
                                             </div>
                                         <?php
                                             $sn++;
@@ -157,34 +189,28 @@
 
                                         <?php echo $fetch; ?>
                                     <?php
-                                    } ?>
+                                    }
+
+
+                                    ?>
+                                    <div class='space-y-4 text-center'>
+                                        <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
+                                            Total :
+                                        </p>
+                                    </div>
                                     <!-- end of products -->
+
+                                </div>
+                                <div class="modal-footer p-4 border-t border-gray-200 rounded-b-md">
                                     <div class="space-y-4 text-center">
 
 
-                                        <a href="#" class="block w-full rounded-full bg-blue-500 p-4 text-sm font-medium text-yellow-50 hover:ring-1 hover:ring-rose-900">
-                                            Checkout
+                                        <a class="block rounded-full border border-blue-500 px-8 py-3 text-sm font-medium text-blue-600" href="../checkout/checkout.php">
+                                            CheckOut/Modify your Cart
                                         </a>
 
 
                                     </div>
-                                </div>
-                                <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
-                                    <button type="button" class="px-6 py-2.5
-          bg-purple-600
-          text-white
-          font-medium
-          text-xs
-          leading-tight
-          uppercase
-          rounded
-          shadow-md
-          hover:bg-purple-700 hover:shadow-lg
-          focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0
-          active:bg-purple-800 active:shadow-lg
-          transition
-          duration-150
-          ease-in-out" data-bs-dismiss="modal">Close</button>
 
                                 </div>
                             </div>
