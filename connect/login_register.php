@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- ===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Login/Register</title>
 </head>
@@ -98,7 +99,7 @@
     </div>
 
 
-
+    <button class="floating-button" onclick="history.back()"><img src="../img/return.png" alt="go back" class="image_w"></button>
 
 </body>
 
