@@ -114,6 +114,7 @@
             <div class="ml-8 flex items-center">
                 <div class="flex items-center">
 
+
                     <!-- Button trigger modal -->
                     <button type="button" class="m-6 inline-flex relative w-fit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="absolute inline-block top-0 right-0 bottom-auto left-auto translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 p-2.5 text-xs bg-blue-500 rounded-full z-10"></div>
@@ -205,10 +206,18 @@
                                     </div>
 
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
+                    <a href="../connect/login_register.php" class=" inline-flex relative w-fit">
 
+                        <div class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
+                            <div title="login/register">
+                                <img src="../img/login.png" alt="login" class="h-4 w-4">
+                            </div>
+                    </a>
                 </div>
             </div>
         </div>
