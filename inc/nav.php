@@ -154,13 +154,13 @@
 
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500">
                                                         <div>
-                                                            <dt class="inline ">Price: <?php echo $data['price']; ?> MAD</dt>
+                                                            <dt class="inline ">Price: <span class="price"><?php echo $data['price']; ?></span> MAD</dt>
 
                                                         </div>
 
                                                         <div>
                                                             <dt class="inline">Qte :</dt>
-                                                            <dd class="inline"><?php echo $data['quantity']; ?></dd>
+                                                            <dd class="inline" class="qty"><?php echo $data['quantity']; ?></dd>
                                                         </div>
 
                                                     </dl>
@@ -182,11 +182,12 @@
                                     <?php
                                     }
 
-
+                                    require('totalPrice.php');
                                     ?>
+
                                     <div class='space-y-4 text-center'>
                                         <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
-                                            Total : <span class="text-md font-bold">0</span>
+                                            Total : <span class="text-md font-bold" id="total"><?php echo $sum * $sumqty; ?>&nbsp;DH</span>
                                         </p>
                                     </div>
                                     <!-- end of products -->

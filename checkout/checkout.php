@@ -1,5 +1,6 @@
 <?php require_once('../inc/header.php');
 require_once('../inc/nav.php');
+require('../inc/totalPrice.php');
 ?>
 
 <!--
@@ -31,7 +32,7 @@ require_once('../inc/nav.php');
                     </div>
 
                     <div class="mt-8">
-                        <p class="text-2xl font-medium tracking-tight">:Total</p>
+                        <p class="text-2xl font-medium tracking-tight"><?php echo $sum * $sumqty; ?>&nbsp;DH</p>
                         <p class="mt-1 text-sm text-gray-500">For the purchase of</p>
                     </div>
 
