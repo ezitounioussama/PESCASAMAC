@@ -2,7 +2,7 @@
 include("../inc/db.php");
 $db = $conn;
 $tableName = "coquillage";
-$columns = ['id', 'name', 'pic', 'c1', 'c2', 't1', 't2'];
+$columns = ['id', 'name', 'pic', 'c1', 'c2', 't1', 't2', 'price'];
 $fetchData = fetch_data($db, $tableName, $columns);
 function fetch_data($db, $tableName, $columns)
 {

@@ -2,7 +2,7 @@
 include("../inc/db.php");
 $db = $conn;
 $tableName = "tarama";
-$columns = ['id', 'name', 'pic', 'c1', 'c2', 't1', 't2', 't3', 't4'];
+$columns = ['id', 'name', 'pic', 'c1', 'c2', 't1', 't2', 't3', 't4', 'price'];
 $fetchData = fetch_data($db, $tableName, $columns);
 function fetch_data($db, $tableName, $columns)
 {

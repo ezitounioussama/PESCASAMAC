@@ -32,7 +32,7 @@ require('../inc/totalPrice.php');
                     </div>
 
                     <div class="mt-8">
-                        <p class="text-2xl font-medium tracking-tight"><?php echo $sum * $sumqty; ?>&nbsp;DH</p>
+                        <p class="text-2xl font-medium tracking-tight"><?php echo $sum ?>&nbsp;DH</p>
                         <p class="mt-1 text-sm text-gray-500">For the purchase of</p>
                     </div>
 

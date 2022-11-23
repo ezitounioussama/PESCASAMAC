@@ -187,7 +187,7 @@
 
                                     <div class='space-y-4 text-center'>
                                         <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
-                                            Total : <span class="text-md font-bold" id="total"><?php echo $sum * $sumqty; ?>&nbsp;DH</span>
+                                            Total : <span class="text-md font-bold" id="total"><?php echo $sum; ?>&nbsp;DH</span>
                                         </p>
                                     </div>
                                     <!-- end of products -->

@@ -32,9 +32,12 @@ $featured = mysqli_query($conn, $sql);
             ******
           </strong> -->
 
-          <div class="mt-8 flex justify-left">
+          <div class="mt-8 flex justify-between">
             <div class="max-w-[55ch]">
               <h1 class="text-2xl font-bold"><?= $product['name']; ?></h1>
+            </div>
+            <div class="text-lg font-bold flex ">
+              <p><?= $product['price']; ?></p><span>DH</span>
             </div>
           </div>
 
@@ -78,6 +81,7 @@ $featured = mysqli_query($conn, $sql);
           <form class="mt-8" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="hidden" type="text" name="product_name" id="product_name" value="<?= $product['name']; ?>">
             <input class="hidden" type="text" name="pic" id="product_name" value="../img/<?= $product['pic']; ?>">
+            <input class="hidden" type="text" name="price" id="product_price" value="<?= $product['price']; ?>">
             <fieldset <?php if (!$product['c1'] && !$product['c2']) {
                         echo "hidden";
                       } ?>>
@@ -134,8 +138,9 @@ $featured = mysqli_query($conn, $sql);
       if (isset($_POST["add"])) {
         $product_name = $_POST["product_name"];
         $qte = $_POST["qty"];
+        $price = $_POST["price"];
         $product_pic = $_POST["pic"];
-        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`) VALUES ('$product_name',12,$qte ,'$product_pic')";
+        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`) VALUES ('$product_name','$price',$qte ,'$product_pic')";
         if (mysqli_query($conn, $sql)) { ?>
           <script>
             alertify.set('notifier', 'position', 'top-right');
