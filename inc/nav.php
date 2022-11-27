@@ -211,7 +211,7 @@
 
                         </div>
                     </div>
-                    <a href="../connect/login_register.php" class=" inline-flex relative w-fit">
+                    <a href="../connect/login_register.html" class=" inline-flex relative w-fit">
 
                         <div class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
                             <div title="login/register">
