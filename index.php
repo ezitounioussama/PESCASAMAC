@@ -1,3 +1,22 @@
+<?php
+session_start();
+if (isset($_SESSION["username"])) {
+  $username = $_SESSION["username"];
+  session_write_close();
+} else {
+  // since the username is not set in session, the user is not-logged-in
+  // he is trying to access this page unauthorized
+  // so let's clear all session variables and redirect him to index
+
+  session_unset();
+  session_write_close();
+  $url = "user-registration/index.php";
+  header("Location: $url");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -183,12 +202,23 @@
               </div>
             </div>
             <div class=" inline-flex relative w-fit mr-1">
-
-              <a href="connect/login_register.html" class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
+              <?Php
+              if (!(isset($_SESSION['username']))) {
+                echo '<a href="user-registration/index.php" class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
                 <div title="login/register">
                   <img src="img/login.png" alt="login" class="h-4 w-4">
                 </div>
-              </a>
+              </a>';
+                exit;
+              } else {
+                echo '<span class="login-signup"><a href="user-registration/logout.php">Logout</a></span>';
+              }
+              ?>
+              <!-- <a href="user-registration/index.php" class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
+                <div title="login/register">
+                  <img src="img/login.png" alt="login" class="h-4 w-4">
+                </div>
+              </a> -->
             </div>
           </div>
         </div>

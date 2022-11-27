@@ -1,4 +1,6 @@
-<?php require_once('../inc/header.php');
+<?php
+
+require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('inc/fetchData.php');
 ?>

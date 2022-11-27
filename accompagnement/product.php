@@ -1,7 +1,11 @@
 <?php
+
 require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('../inc/db.php');
+
+
+
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
