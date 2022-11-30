@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2022 at 11:37 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Nov 30, 2022 at 11:29 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,7 +38,7 @@ CREATE TABLE `accompagnement` (
   `c1` text NOT NULL,
   `c2` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `accompagnement`
@@ -53,6 +53,27 @@ INSERT INTO `accompagnement` (`id`, `name`, `pic`, `d1`, `d2`, `d3`, `d4`, `c1`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
+(1, 'oussamaezitouni', '0000', 'ezitounioussama@gmail.com'),
+(3, 'kirito', '$2y$10$45UV2.OwszLuQDd4P6zeaeE1sclxe2D4IdJ8GngdNGrBhXkpCW0Dq', 'kirito@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cart`
 --
 
@@ -61,7 +82,7 @@ CREATE TABLE `cart` (
   `price` float NOT NULL,
   `quantity` int(11) NOT NULL,
   `pic` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -78,7 +99,7 @@ CREATE TABLE `chairAraignee` (
   `t1` text NOT NULL,
   `t2` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `chairAraignee`
@@ -103,7 +124,7 @@ CREATE TABLE `coquillage` (
   `t1` text NOT NULL,
   `t2` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `coquillage`
@@ -130,7 +151,7 @@ CREATE TABLE `crustaces` (
   `c1` varchar(50) NOT NULL,
   `c2` varchar(50) NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `crustaces`
@@ -157,7 +178,7 @@ CREATE TABLE `F_mer` (
   `c5` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `F_mer`
@@ -184,7 +205,7 @@ CREATE TABLE `p_congele` (
   `t1` text NOT NULL,
   `t2` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `p_congele`
@@ -222,7 +243,7 @@ CREATE TABLE `p_frait` (
   `t6` text NOT NULL,
   `description` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `p_frait`
@@ -264,7 +285,7 @@ CREATE TABLE `tarama` (
   `t3` text NOT NULL,
   `t4` text NOT NULL,
   `price` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tarama`
@@ -272,6 +293,27 @@ CREATE TABLE `tarama` (
 
 INSERT INTO `tarama` (`id`, `name`, `pic`, `c1`, `c2`, `t1`, `t2`, `t3`, `t4`, `price`) VALUES
 (1, 'Tarama', 'Tarama.png', '100g', '500g', 'Tarama Rose', 'Tarama Blanc', 'Tarama Truff', 'Tarama au Piment d\'espelette', 155.99);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_member`
+--
+
+CREATE TABLE `tbl_member` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `create_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_member`
+--
+
+INSERT INTO `tbl_member` (`id`, `username`, `password`, `email`, `create_at`) VALUES
+(1, 'oussama ezitouni', '$2y$10$n4lK3T.h5ejFmTebLfMmn.akTO8WLj7yjNW6nncBCmpcZP3ikOo1G', 'ezitounioussama@gmail.com', '2022-11-27 19:23:04');
 
 --
 -- Indexes for dumped tables
@@ -281,6 +323,12 @@ INSERT INTO `tarama` (`id`, `name`, `pic`, `c1`, `c2`, `t1`, `t2`, `t3`, `t4`, `
 -- Indexes for table `accompagnement`
 --
 ALTER TABLE `accompagnement`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -332,6 +380,12 @@ ALTER TABLE `tarama`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_member`
+--
+ALTER TABLE `tbl_member`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -340,6 +394,12 @@ ALTER TABLE `tarama`
 --
 ALTER TABLE `accompagnement`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `chairAraignee`
@@ -381,6 +441,12 @@ ALTER TABLE `p_frait`
 -- AUTO_INCREMENT for table `tarama`
 --
 ALTER TABLE `tarama`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_member`
+--
+ALTER TABLE `tbl_member`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
