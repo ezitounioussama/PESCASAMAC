@@ -7,11 +7,11 @@ if (!$conn) {
     die("Fatal Error: Connection Failed!");
 }
 
-if (isset($_POST['deleteAll'])) {
-    $query = $conn->prepare("DELETE from `cart`");
-    $query->execute();
-    header("location:checkout.php");
-}
+
+$query = $conn->prepare("DELETE from `cart`");
+$query->execute();
+header("location:checkout.php");
+
 ?>
 <script>
     alertify.set('notifier', 'position', 'top-right');

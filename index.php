@@ -1,22 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION["username"])) {
-  $username = $_SESSION["username"];
-  session_write_close();
-} else {
-  // since the username is not set in session, the user is not-logged-in
-  // he is trying to access this page unauthorized
-  // so let's clear all session variables and redirect him to index
-
-  session_unset();
-  session_write_close();
-  $url = "user-registration/index.php";
-  header("Location: $url");
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -176,19 +157,19 @@ if (isset($_SESSION["username"])) {
                   </div>
                   <div class="modal-body relative p-4">
                     <div class="items-center sm:flex">
-                      <span class="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-white mb-3">
-                        <img src="img/empty-cart.png" alt="empty-cart" class="h-8 w-8" />
-                      </span>
+
 
                       <p class="mt-3 text-lg font-medium sm:mt-0 sm:ml-3">
-                        Cart is empty!
+                        if you already add a product click to modify and you'll see it !
+                        <br>
+                        this is the first page that's why you can't see products you add
                       </p>
                     </div>
-                    <div class="space-y-4 text-center">
+                    <!-- <div class="space-y-4 text-center">
                       <p class="block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium">
                         Total : <span class="text-md font-bold">0</span>
                       </p>
-                    </div>
+                    </div> -->
                     <!-- end of products -->
                   </div>
                   <div class="modal-footer p-4 border-t border-gray-200 rounded-b-md">
@@ -201,25 +182,7 @@ if (isset($_SESSION["username"])) {
                 </div>
               </div>
             </div>
-            <div class=" inline-flex relative w-fit mr-1">
-              <?Php
-              if (!(isset($_SESSION['username']))) {
-                echo '<a href="user-registration/index.php" class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
-                <div title="login/register">
-                  <img src="img/login.png" alt="login" class="h-4 w-4">
-                </div>
-              </a>';
-                exit;
-              } else {
-                echo '<span class="login-signup"><a href="user-registration/logout.php">Logout</a></span>';
-              }
-              ?>
-              <!-- <a href="user-registration/index.php" class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
-                <div title="login/register">
-                  <img src="img/login.png" alt="login" class="h-4 w-4">
-                </div>
-              </a> -->
-            </div>
+
           </div>
         </div>
       </div>

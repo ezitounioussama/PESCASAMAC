@@ -86,25 +86,25 @@ $featured = mysqli_query($conn, $sql);
 
                 <div class="-m-0.5 flex flex-wrap justify-right">
 
-                  <select id="mycalibre" class="relative w-full rounded-lg  p-2.5 text-sm font-normal focus:z-10" id="country" name="country" autocomplete="country-name">
+                  <select id="mycalibre" class="relative w-full rounded-lg  p-2.5 text-sm font-normal focus:z-10" name="selcalibre" autocomplete="country-name">
 
                     <option value="" selected>Choisir une option</option>
 
-                    <option value="2" <?php if (!($product['c1'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c1']; ?></option>
-                    <option value="3" <?php if (!($product['c2'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c2']; ?></option>
-                    <option value="4" <?php if (!($product['c3'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c3']; ?></option>
-                    <option value="5" <?php if (!($product['c4'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c4']; ?></option>
-                    <option value="6" <?php if (!($product['c5'])) {
-                                        echo "hidden";
-                                      } ?>><?= $product['c5']; ?></option>
+                    <option value="<?= $product['c1']; ?>" <?php if (!($product['c1'])) {
+                                                              echo "hidden";
+                                                            } ?>><?= $product['c1']; ?></option>
+                    <option value="<?= $product['c2']; ?>" <?php if (!($product['c2'])) {
+                                                              echo "hidden";
+                                                            } ?>><?= $product['c2']; ?></option>
+                    <option value="<?= $product['c3']; ?>" <?php if (!($product['c3'])) {
+                                                              echo "hidden";
+                                                            } ?>><?= $product['c3']; ?></option>
+                    <option value="<?= $product['c4']; ?>" <?php if (!($product['c4'])) {
+                                                              echo "hidden";
+                                                            } ?>><?= $product['c4']; ?></option>
+                    <option value="<?= $product['c5']; ?>" <?php if (!($product['c5'])) {
+                                                              echo "hidden";
+                                                            } ?>><?= $product['c5']; ?></option>
 
                   </select>
 
@@ -143,7 +143,9 @@ $featured = mysqli_query($conn, $sql);
         $qte = $_POST["qty"];
         $price = $_POST["price"];
         $product_pic = $_POST["pic"];
-        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`) VALUES ('$product_name','$price',$qte ,'$product_pic')";
+        $calibre = $_POST["selcalibre"];
+
+        $sql = "INSERT INTO `cart`(`name`, `price`, `quantity`,`pic`, `calibre`,`traitement`) VALUES ('$product_name','$price',$qte ,'$product_pic','$calibre','')";
         if (mysqli_query($conn, $sql)) { ?>
           <script>
             alertify.set('notifier', 'position', 'top-right');
