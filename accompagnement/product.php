@@ -223,5 +223,5 @@ $featured = mysqli_query($conn, $sql);
   }
   ?>
 </section>
-
+<p></p>
 <?php require_once('../inc/footer.php'); ?>
