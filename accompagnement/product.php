@@ -9,7 +9,7 @@ require_once('../inc/db.php');
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
-$sql = "SELECT * FROM accompagnement WHERE id = '$id'";
+$sql = "SELECT * FROM tbl_products WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
@@ -90,7 +90,7 @@ $featured = mysqli_query($conn, $sql);
             <input class="hidden" type="text" name="price" id="product_price" value="<?= $product['price']; ?>">
 
 
-            <fieldset class="mb-5" <?php if (!$product['d1'] && !$product['d2'] && !$product['d3'] && !$product['d4']) {
+            <fieldset class="mb-5" <?php if (!$product['t1'] && !$product['t2'] && !$product['t3'] && !$product['t4']) {
                                       echo "hidden";
                                     } ?>>
               <legend class="mb-3 text-xl font-medium">Disponibilité :</legend>
@@ -103,18 +103,18 @@ $featured = mysqli_query($conn, $sql);
 
                     <option value="" selected>Choisir une option</option>
 
-                    <option value="<?= $product['d1']; ?>" <?php if (!($product['d1'])) {
+                    <option value="<?= $product['t1']; ?>" <?php if (!($product['t1'])) {
                                                               echo "hidden";
-                                                            } ?>><?= $product['d1']; ?></option>
-                    <option value="<?= $product['d2']; ?>" <?php if (!($product['d2'])) {
+                                                            } ?>><?= $product['t1']; ?></option>
+                    <option value="<?= $product['t2']; ?>" <?php if (!($product['t2'])) {
                                                               echo "hidden";
-                                                            } ?>><?= $product['d2']; ?></option>
-                    <option value="<?= $product['d3']; ?>" <?php if (!($product['d3'])) {
+                                                            } ?>><?= $product['t2']; ?></option>
+                    <option value="<?= $product['t3']; ?>" <?php if (!($product['t3'])) {
                                                               echo "hidden";
-                                                            } ?>><?= $product['d3']; ?></option>
-                    <option value="<?= $product['d4']; ?>" <?php if (!($product['d4'])) {
+                                                            } ?>><?= $product['t3']; ?></option>
+                    <option value="<?= $product['t4']; ?>" <?php if (!($product['t4'])) {
                                                               echo "hidden";
-                                                            } ?>><?= $product['d4']; ?></option>
+                                                            } ?>><?= $product['t4']; ?></option>
 
 
                   </select>

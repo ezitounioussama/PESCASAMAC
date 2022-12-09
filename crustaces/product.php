@@ -5,7 +5,7 @@ require_once('../inc/db.php');
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
-$sql = "SELECT * FROM crustaces WHERE id = '$id'";
+$sql = "SELECT * FROM tbl_products WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>

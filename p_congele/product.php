@@ -5,7 +5,7 @@ require_once('../inc/db.php');
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
-$sql = "SELECT * FROM p_congele WHERE id = '$id'";
+$sql = "SELECT * FROM tbl_products WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
 ?>
@@ -131,7 +131,7 @@ $featured = mysqli_query($conn, $sql);
                   </select>
 
                   <script>
-                    if (($('#id').html() == 2)) {
+                    if (($('#id').html() == 20)) {
                       $('#myselection').change(function() {
                         if (($("#myselection option:selected").text() == "rouge") || ($("#myselection option:selected").text() == "Choisir une option")) {
                           $('#myIMG').attr('src', "../img/<?= $product['pic']; ?>");

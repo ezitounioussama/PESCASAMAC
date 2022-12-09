@@ -1,21 +1,15 @@
 <?php
 
 
-
-$db = mysqli_connect("localhost", "root", "", "pescasamac");
-
-if (!$db) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+require_once('../inc/db.php');
 
 
 $name = $_GET['name']; // get id through query string
 
-$del = mysqli_query($db, "delete from cart where name = '$name'"); // delete query
+$del = mysqli_query($conn, "delete from cart where name = '$name'"); // delete query
 
 if ($del) {
-    mysqli_close($db); // Close connection
+    mysqli_close($conn); // Close connection
     header("location:checkout.php"); // redirects to all records page 
     print "<script>
     alertify.set('notifier', 'position', 'top-right');

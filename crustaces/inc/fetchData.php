@@ -1,7 +1,7 @@
 <?php
 include("../inc/db.php");
 $db = $conn;
-$tableName = "crustaces";
+$tableName = "tbl_products";
 $columns = ['id', 'name', 'pic', 'c1', 'c2', 'price'];
 $fetchData = fetch_data($db, $tableName, $columns);
 function fetch_data($db, $tableName, $columns)
@@ -14,7 +14,7 @@ function fetch_data($db, $tableName, $columns)
         $msg = "Table Name is empty";
     } else {
         $columnName = implode(", ", $columns);
-        $query = "SELECT " . $columnName . " FROM $tableName" . " ORDER BY id DESC";
+        $query = "SELECT " . $columnName . " FROM $tableName"  . " WHERE `category`='crustace'  " . " ORDER BY id DESC";
         $result = $db->query($query);
         if ($result == true) {
             if ($result->num_rows > 0) {
