@@ -52,7 +52,7 @@ require('../inc/totalPrice.php');
                                                 <div class="ml-4">
 
                                                     <p class="text-sm"><?php echo $data['name']; ?></p>
-                                                    <input type="hidden" name="product_name" value="<?php echo $data['name']; ?>">
+
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500"><?php echo $data['calibre'] ?></dl>
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500"><?php echo $data['traitement'] ?></dl>
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500">
