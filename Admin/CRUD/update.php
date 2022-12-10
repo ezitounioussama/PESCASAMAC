@@ -3,7 +3,7 @@
 
 
 if (isset($_GET['id'])) {
-    include "config.php";
+    include "../../inc/db.php";
     $id = $_GET['id'];
 
     $sql = "SELECT * FROM `p_congele` WHERE `id`='$id'";

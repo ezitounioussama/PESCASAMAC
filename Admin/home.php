@@ -20,7 +20,7 @@ require_once('inc_Pcongele/nav.php');
 
 <?php
 
-include "db/config.php";
+include "../inc/db.php";
 
 if (isset($_POST['submit'])) {
 
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     $t1 = $_POST['t1'];
     $t2 = $_POST['t2'];
 
-    $sql = "INSERT INTO `test`(`name`, `pic`, `c1`, `c2`, `t1` , `t2`) VALUES 
+    $sql = "INSERT INTO `tbl_products`(`name`, `pic`, `c1`, `c2`, `t1` , `t2`) VALUES 
     ('$name','$pic','$c1','$c2','$t1','$t2')";
 
     $result = $conn->query($sql);
@@ -58,13 +58,13 @@ if (isset($_POST['submit'])) {
 <!-- Delete statement  -->
 <?php
 
-include "db/config.php";
+include "../inc/db.php";
 
 if (isset($_GET['id'])) {
 
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM `test` WHERE `id`='$id'";
+    $sql = "DELETE FROM `tbl_products` WHERE `id`='$id'";
 
     $result = $conn->query($sql);
 
@@ -248,9 +248,9 @@ if (isset($_GET['id'])) {
                     </div>
                     <?php
 
-                    include "db/config.php";
+                    include "../inc/db.php";
 
-                    $sql = "SELECT * FROM test";
+                    $sql = "SELECT * FROM tbl_products Where category='p_congele'";
 
                     $result = $conn->query($sql);
 

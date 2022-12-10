@@ -1,6 +1,6 @@
 <?php
 
-include "config.php";
+include "../../inc/db.php";
 
 $sql = "SELECT * FROM p_congele";
 
