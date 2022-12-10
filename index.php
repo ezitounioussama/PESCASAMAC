@@ -68,18 +68,25 @@
   <div class="share-container floating">
     <ul class="share-link">
       <li>
-        <img src="img/phone.svg" alt="phone" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icons8-ringer-volume.gif" alt="phone" class="w-8 h-8" />&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="tel:+212663628206" class="capitalize">Appelez-nous</a>
       </li>
       <li>
-        <img src="img/whatsapp.svg" class="w-6 h-6" />
+        <img src="img/icons8-whatsapp.gif" class="w-8 h-8" />
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://wa.me/212663628206?text=Just%20a%20test" target="_blank" class="capitalize">Whatsapp</a>
       </li>
+
       <li>
-        <img src="img/email.svg" alt="mail" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icons8-instagram.gif" class="w-8 h-8" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.instagram.com/pescasamac/" target="_blank" class="capitalize">Instagram</a>
+      </li>
+      <li>
+        <img src="img/icons8-gmail-logo.gif" alt="mail" class="w-8 h-8" />&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="mailto:Pesca.Samac@gmail.com" class="capitalize">Envoyez nous un message</a>&nbsp
       </li>
+
     </ul>
     <div class="social-link">
       <img class="send" src="https://i.postimg.cc/CMfVgsSQ/send.png" alt="send" />
@@ -103,7 +110,7 @@
       </div>
 
       <div class="flex flex-1 items-center justify-end">
-        <nav class="hidden lg:flex lg:gap-4 lg:text-md lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500">
+        <nav class="hidden lg:flex lg:gap-4 lg:text-md lg:font-bold  lg:tracking-wide lg:text-gray-500">
           <a href="p_frais/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
             P.frais
           </a>
@@ -112,20 +119,61 @@
             P.congelés
           </a>
           <a href="accompagnement/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-            Accompagnement
+            Accompagnements et Tartines
           </a>
-          <a href="#Saumons" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-            Saumons
+          <a href="chair_araignee/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+            chair d'araignee
           </a>
 
           <a href="fruitDeMer/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
             Fruit de mer
           </a>
-          <a href="#Contact" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-            Contactez nous
+          <a href="crustaces/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+            Crustaces
           </a>
         </nav>
-
+        <?php
+        include("inc/db.php");
+        $db = $conn;
+        $tableName = "cart";
+        $columns = ['*'];
+        $fetch  = fetch($db, $tableName, $columns);
+        function fetch($db, $tableName, $columns)
+        {
+          if (empty($db)) {
+            $msg = "Database connection error";
+          } elseif (empty($columns) || !is_array($columns)) {
+            $msg = "columns Name must be defined in an indexed array";
+          } elseif (empty($tableName)) {
+            $msg = "Table Name is empty";
+          } else {
+            $columnName = implode(", ", $columns);
+            $query = "SELECT " . $columnName . " FROM $tableName" . " ORDER BY name DESC";
+            $result = $db->query($query);
+            if ($result == true) {
+              if ($result->num_rows > 0) {
+                $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                $msg = $row;
+              } else {
+                $msg = "<div class='items-center sm:flex'>
+                            <span
+                              class='inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-white mb-3'
+                            >
+                              <img src='../img/empty-cart.png' alt='empty-cart' class='h-8 w-8'/>
+                            </span>
+                        
+                            <p class='mt-3 text-lg font-medium sm:mt-0 sm:ml-3'>
+                              Cart is empty!
+                            </p>
+                          </div>";
+              }
+            } else {
+              $msg = mysqli_error($db);
+            }
+          }
+          return $msg;
+        }
+        ?>
         <div class="ml-8 flex items-center">
           <div class="flex items-center">
             <!-- Button trigger modal -->
@@ -156,21 +204,61 @@
                     </button>
                   </div>
                   <div class="modal-body relative p-4">
-                    <div class="items-center sm:flex">
+                    <!-- products in the cart -->
+                    <?php
+                    if (is_array($fetch)) {
+                      $sn = 1;
+                      foreach ($fetch  as $data) {
+                    ?>
+                        <div class="flex items-start pt-4 pb-4 ">
 
+                          <img alt="<?php echo $data['name']; ?>" src="img/<?php echo $data['pic']; ?>" class="h-16 w-16 rounded-lg border-2 border-black object-cover" />
 
-                      <p class="mt-3 text-lg font-medium sm:mt-0 sm:ml-3">
-                        if you already add a product click to modify and you'll see it !
-                        <br>
-                        this is the first page that's why you can't see products you add
+                          <div class="ml-4">
+                            <h3 class="text-sm"><?php echo $data['name']; ?></h3>
+
+                            <dl class="mt-1 space-y-1 text-xs text-gray-500">
+                              <div>
+                                <dt class="inline ">Price: <span class="price"><?php echo $data['price']; ?></span> MAD</dt>
+
+                              </div>
+
+                              <div>
+                                <dt class="inline">Qte :</dt>
+                                <dd class="inline" class="qty"><?php echo $data['quantity']; ?></dd>
+                              </div>
+
+                              <div>
+
+                                <dd class="inline" class="qty"><?php echo $data['calibre']; ?></dd>
+                              </div>
+                              <div>
+                                <dt class="inline"><?php echo $data['traitement'];
+                                                    ?></dt>
+                              </div>
+                            </dl>
+                          </div>
+
+                        </div>
+                      <?php
+                        $sn++;
+                      }
+                    } else { ?>
+
+                      <?php echo $fetch; ?>
+                    <?php
+                    }
+
+                    require('inc/totalPrice.php');
+                    ?>
+
+                    <div class='space-y-4 text-center'>
+                      <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
+                        Total : <span class="text-md font-bold" id="total"><?php echo $sum; ?>&nbsp;DH</span>
                       </p>
                     </div>
-                    <!-- <div class="space-y-4 text-center">
-                      <p class="block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium">
-                        Total : <span class="text-md font-bold">0</span>
-                      </p>
-                    </div> -->
                     <!-- end of products -->
+
                   </div>
                   <div class="modal-footer p-4 border-t border-gray-200 rounded-b-md">
                     <div class="space-y-4 text-center">
@@ -213,17 +301,17 @@
                 <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="p_congele/home.php">P.Congeles</a>
               </li>
               <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="accompagnement/home.php">Accompagnement</a>
+                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="accompagnement/home.php">Accompagnements et Tartines</a>
               </li>
 
               <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Sumons">Sumons</a>
+                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="chair_araignee/home.php">chair d'araignee</a>
               </li>
               <li class="mb-1">
                 <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="fruitDeMer/home.php">Fruit de mer</a>
               </li>
               <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Contact">Contactez Nous</a>
+                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="crustaces/home.php">Crustaces</a>
               </li>
             </ul>
           </div>

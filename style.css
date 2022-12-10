@@ -75,7 +75,7 @@ cite {
   justify-content: start;
 
   flex-direction: row;
-
+  align-items: center;
   padding: 7.5px 0px 3px 20px;
   cursor: pointer;
 }
@@ -103,7 +103,7 @@ cite {
 }
 .share-link.active {
   width: 270px;
-  height: 170px;
+  height: 260px;
   border-radius: 15px;
   transform: translate(-30%, -70%);
   transition: all 0.5s ease 0.4s;

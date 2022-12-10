@@ -7,18 +7,25 @@
 <div class="share-container floating">
     <ul class="share-link">
         <li>
-            <img src="../img/phone.svg" alt="phone" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../img/icons8-ringer-volume.gif" alt="phone" class="w-8 h-8" />&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="tel:+212663628206" class="capitalize">Appelez-nous</a>
         </li>
         <li>
-            <img src="../img/whatsapp.svg" class="w-6 h-6" />
+            <img src="../img/icons8-whatsapp.gif" class="w-8 h-8" />
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://wa.me/212663628206?text=Just%20a%20test" target="_blank" class="capitalize">Whatsapp</a>
         </li>
+
         <li>
-            <img src="../img/email.svg" alt="mail" class="w-6 h-6" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../img/icons8-instagram.gif" class="w-8 h-8" />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/pescasamac/" target="_blank" class="capitalize">Instagram</a>
+        </li>
+        <li>
+            <img src="../img/icons8-gmail-logo.gif" alt="mail" class="w-8 h-8" />&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="mailto:Pesca.Samac@gmail.com" class="capitalize">Envoyez nous un message</a>&nbsp
         </li>
+
     </ul>
     <div class="social-link">
         <img class="send" src="https://i.postimg.cc/CMfVgsSQ/send.png" alt="send" />
@@ -44,7 +51,7 @@
         </div>
 
         <div class="flex flex-1 items-center justify-end">
-            <nav class="hidden lg:flex lg:gap-4 lg:text-md lg:font-bold lg:uppercase lg:tracking-wide lg:text-gray-500">
+            <nav class="hidden lg:flex lg:gap-4 lg:text-md lg:font-bold  lg:tracking-wide lg:text-gray-500">
                 <a href="../p_frais/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     P.frais
                 </a>
@@ -53,17 +60,17 @@
                     P.congelés
                 </a>
                 <a href="../accompagnement/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-                    Accompagnement
+                    Accompagnements et Tartines
                 </a>
-                <a href="#Saumons" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-                    Saumons
+                <a href="../chair_araignee/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                    chair d'araignee
                 </a>
 
                 <a href="../fruitDeMer/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
                     Fruit de mer
                 </a>
-                <a href="#Contact" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-                    Contactez nous
+                <a href="../crustaces/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
+                    Crustaces
                 </a>
             </nav>
 
@@ -213,13 +220,7 @@
 
                         </div>
                     </div>
-                    <a href="../connect/login_register.html" class=" inline-flex relative w-fit">
 
-                        <div class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg ">
-                            <div title="login/register">
-                                <img src="../img/login.png" alt="login" class="h-4 w-4">
-                            </div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -252,16 +253,17 @@
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../p_congele/home.php">P.Congeles</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../accompagnement/home.php">Accompagnement</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../accompagnement/home.php">Accompagnements et Tartines</a>
                     </li>
+
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Sumons">Sumons</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../chair_araignee/home.php">chair d'araignee</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../fruitDeMer/home.php">Fruit de mer</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#Contact">Contactez Nous</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="../crustaces/home.php">Crustaces</a>
                     </li>
                 </ul>
             </div>
