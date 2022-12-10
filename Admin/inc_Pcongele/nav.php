@@ -21,7 +21,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Poisson Congeles</span>
+                    <span class="nav-link-text ms-1">Products</span>
 
                 </a>
             </li>

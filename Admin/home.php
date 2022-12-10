@@ -1,7 +1,7 @@
 <?php
 require_once('inc_Pcongele/header.php');
 require_once('inc_Pcongele/nav.php');
-
+include "../inc/db.php";
 
 ?>
 
@@ -234,26 +234,44 @@ if (isset($_GET['id'])) {
                         </div>
                     </div>
                 </div>
+
                 <div class="card-body px-0 py-0">
                     <div class="border-bottom py-3 px-3 d-sm-flex align-items-center">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable1" autocomplete="off" checked="">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable1">All</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable2" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable2">P_congele</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable3" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable3">P_frais</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable4" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable4">Accompagnement</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable5" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable5">ChairAraignee</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable6" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable6">Crustaces</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable7" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable7">Fruit_Mer</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable8" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable8">Tarama</label>
+                                <input type="radio" class="btn-check" name="btnradiotable" id="btnradiotable9" autocomplete="off">
+                                <label class="btn btn-white px-3 mb-0" for="btnradiotable9">Coquillage</label>
 
-                        <div class="input-group w-sm-25 ms-auto">
+                            </div>
+                        </form>
+                        <!-- <div class="input-group w-sm-25 ms-auto">
                             <span class="input-group-text text-body">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                                 </svg>
                             </span>
                             <input type="text" class="form-control" placeholder="Search">
-                        </div>
+                        </div> -->
                     </div>
                     <?php
-
-                    include "../inc/db.php";
-
-                    $sql = "SELECT * FROM tbl_products";
-
+                    $sql = "SELECT * FROM tbl_products ";
                     $result = $conn->query($sql);
-
                     ?>
                     <div class="table-responsive p-0 m-0">
                         <table class="table align-items-center mb-0">

@@ -47,6 +47,12 @@
                 $t1 = $row['t1'];
 
                 $t2 = $row['t2'];
+                $t3 = $row['t3'];
+
+                $t4 = $row['t4'];
+                $t5 = $row['t5'];
+
+                $t6 = $row['t6'];
 
                 $id = $row['id'];
             }
@@ -69,8 +75,14 @@
                 $t1 = $_POST['t1'];
 
                 $t2 = $_POST['t2'];
+                $t3 = $_POST['t3'];
 
-                $sql = "UPDATE `tbl_products` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`c3`='$c3',`c4`='$c4',`c5`='$c5',`t1`='$t1' ,`t2`='$t2' WHERE `id`='$id'";
+                $t4 = $_POST['t4'];
+                $t5 = $_POST['t5'];
+
+                $t6 = $_POST['t6'];
+
+                $sql = "UPDATE `tbl_products` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`c3`='$c3',`c4`='$c4',`c5`='$c5',`t1`='$t1' ,`t2`='$t2',`t3`='$t3' ,`t4`='$t4',`t5`='$t5' ,`t6`='$t6' WHERE `id`='$id'";
 
                 $result = $conn->query($sql);
 
@@ -87,7 +99,7 @@
                 <div class="p-5 text-center">
                     <h1 class="mb-3">Update <?php echo $name; ?> </h1>
                 </div>
-                <!-- 2 column grid layout with text inputs for the first and last names -->
+
                 <div class="row mb-4">
                     <div class="col">
                         <div class="form-outline">
@@ -103,46 +115,67 @@
                     </div>
                 </div>
 
-                <!-- Text input -->
+
                 <div class="form-outline mb-4">
                     <input type="text" id="form6Example3" class="form-control" value="<?php echo $pic; ?>" name="pic" />
                     <label class=" form-label" for="form6Example3">Picture</label>
                 </div>
 
-                <!-- Text input -->
+
                 <div class="form-outline mb-4">
                     <input type="text" id="form6Example4" class="form-control" value="<?php echo $c1; ?>" name="c1" />
                     <label class=" form-label" for="form6Example4">Calibre 1</label>
+
                 </div>
 
-                <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c2; ?>" name="c2" />
+                    <input type="text" class="form-control" value="<?php echo $c2; ?>" name="c2" />
                     <label class=" form-label" for="form6Example5">Calibre 2</label>
                 </div>
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c3; ?>" name="c3" />
+                    <input type="text" class="form-control" value="<?php echo $c3; ?>" name="c3" />
                     <label class=" form-label" for="form6Example5">Calibre 3</label>
                 </div>
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c4; ?>" name="c4" />
+                    <input type="text" class="form-control" value="<?php echo $c4; ?>" name="c4" />
                     <label class=" form-label" for="form6Example5">Calibre 4</label>
                 </div>
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c5; ?>" name="c5" />
+                    <input type="text" class="form-control" value="<?php echo $c5; ?>" name="c5" />
                     <label class=" form-label" for="form6Example5">Calibre 5</label>
                 </div>
 
-                <!-- Number input -->
+
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example6" class="form-control" value="<?php echo $t1; ?>" name="t1" />
+                    <input type="text" class="form-control" value="<?php echo $t1; ?>" name="t1" />
                     <label class=" form-label" for="form6Example6">Conditionnement 1</label>
                 </div>
 
-                <!-- Number input -->
+
                 <div class="form-outline mb-4">
-                    <input type="text" id="form6Example6" class="form-control" value="<?php echo $t2; ?>" name="t2" />
+                    <input type="text" class="form-control" value="<?php echo $t2; ?>" name="t2" />
                     <label class=" form-label" for="form6Example6">Conditionnement 2</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" value="<?php echo $t3; ?>" name="t3" />
+                    <label class=" form-label" for="form6Example6">Conditionnement 3</label>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" value="<?php echo $t4; ?>" name="t4" />
+                    <label class=" form-label" for="form6Example6">Conditionnement 4</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" value="<?php echo $t5; ?>" name="t5" />
+                    <label class=" form-label" for="form6Example6">Conditionnement 5</label>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <input type="text" class="form-control" value="<?php echo $t6; ?>" name="t6" />
+                    <label class=" form-label" for="form6Example6">Conditionnement 6</label>
                 </div>
 
 
