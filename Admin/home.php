@@ -250,20 +250,30 @@ if (isset($_GET['id'])) {
 
                     include "../inc/db.php";
 
-                    $sql = "SELECT * FROM tbl_products Where category='p_congele'";
+                    $sql = "SELECT * FROM tbl_products";
 
                     $result = $conn->query($sql);
 
                     ?>
-                    <div class="table-responsive p-0">
+                    <div class="table-responsive p-0 m-0">
                         <table class="table align-items-center mb-0">
                             <thead class="bg-gray-100">
                                 <tr>
-                                    <th class="text-secondary text-xs font-weight-semibold opacity-7">Name</th>
-                                    <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Calibre 1</th>
-                                    <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Calibre 2</th>
+                                    <th class="text-secondary opacity-7">Category</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9 w-32">Name</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9">Calibre 1</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9">Calibre 2</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9">Calibre 3</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9">Calibre 4</th>
+                                    <th class="text-secondary text-xs font-weight-semibold opacity-9">Calibre 5</th>
                                     <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 1</th>
                                     <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 2</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 3</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 4</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 5</th>
+                                    <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 6</th>
+                                    <th class="text-secondary opacity-7">Price</th>
+
                                     <th class="text-secondary opacity-7"></th>
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
@@ -279,9 +289,12 @@ if (isset($_GET['id'])) {
                                 ?>
                                         <tr>
                                             <td>
-                                                <div class="d-flex px-2 py-1">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['category']; ?></span>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex px-1 py-1">
                                                     <div class="d-flex align-items-center">
-                                                        <img src="../p_congele/img/<?php echo $row['pic']; ?>" class="avatar avatar-sm rounded-circle me-2" alt="user1">
+                                                        <img src="../img/<?php echo $row['pic']; ?>" class="avatar avatar-sm rounded-circle me-2" alt="user1">
                                                     </div>
                                                     <div class="d-flex flex-column justify-content-center ms-1">
                                                         <h6 class="mb-0 text-sm font-weight-semibold"><?php echo $row['name']; ?></h6>
@@ -289,18 +302,43 @@ if (isset($_GET['id'])) {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="align-middle text-center text-lg">
+                                            <td class="align-middle text-left text-lg">
                                                 <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c1']; ?></span>
-
                                             </td>
-                                            <td class="align-middle text-center text-lg">
+                                            <td class="align-middle text-left text-lg">
                                                 <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c2']; ?></span>
                                             </td>
+                                            <td class="align-middle text-left text-lg">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c3']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-left text-lg">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c4']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-left text-lg">
+                                                <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['c5']; ?></span>
+                                            </td>
+
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t1']; ?></span>
                                             </td>
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t2']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t3']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t4']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t5']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['t6']; ?></span>
+                                            </td>
+
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['price']; ?></span>
                                             </td>
                                             <td class="align-middle">
                                                 <a href=' inc_Pcongele/update.php?id=<?php echo $row["id"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit data">

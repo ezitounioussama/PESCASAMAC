@@ -20,10 +20,10 @@
 
 
     if (isset($_GET['id'])) {
-        include "../db/config.php";
+        include "../../inc/db.php";
         $id = $_GET['id'];
 
-        $sql = "SELECT * FROM `test` WHERE `id`='$id'";
+        $sql = "SELECT * FROM `tbl_products` WHERE `id`='$id'";
 
         $result = $conn->query($sql);
 
@@ -39,6 +39,10 @@
                 $c1 = $row['c1'];
 
                 $c2  = $row['c2'];
+                $c3 = $row['c3'];
+
+                $c4  = $row['c4'];
+                $c5  = $row['c5'];
 
                 $t1 = $row['t1'];
 
@@ -57,18 +61,22 @@
                 $c1 = $_POST['c1'];
 
                 $c2 = $_POST['c2'];
+                $c3 = $_POST['c3'];
+
+                $c4 = $_POST['c4'];
+                $c5 = $_POST['c5'];
 
                 $t1 = $_POST['t1'];
 
                 $t2 = $_POST['t2'];
 
-                $sql = "UPDATE `p_congele` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`t1`='$t1' ,`t2`='$t2' WHERE `id`='$id'";
+                $sql = "UPDATE `tbl_products` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`c3`='$c3',`c4`='$c4',`c5`='$c5',`t1`='$t1' ,`t2`='$t2' WHERE `id`='$id'";
 
                 $result = $conn->query($sql);
 
                 if ($result == TRUE) {
 
-                    header('Location: ../P_Congele.php');
+                    header('Location: ../home.php');
                 } else {
 
                     echo "Error:" . $sql . "<br>" . $conn->error;
@@ -111,6 +119,18 @@
                 <div class="form-outline mb-4">
                     <input type="text" id="form6Example5" class="form-control" value="<?php echo $c2; ?>" name="c2" />
                     <label class=" form-label" for="form6Example5">Calibre 2</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c3; ?>" name="c3" />
+                    <label class=" form-label" for="form6Example5">Calibre 3</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c4; ?>" name="c4" />
+                    <label class=" form-label" for="form6Example5">Calibre 4</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" id="form6Example5" class="form-control" value="<?php echo $c5; ?>" name="c5" />
+                    <label class=" form-label" for="form6Example5">Calibre 5</label>
                 </div>
 
                 <!-- Number input -->
