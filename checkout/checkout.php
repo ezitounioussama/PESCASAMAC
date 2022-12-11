@@ -46,15 +46,18 @@ require('../inc/totalPrice.php');
                                 ?>
                                         <li class="flex items-center justify-between py-4">
 
+
                                             <div class="flex items-start">
                                                 <img alt="<?php echo $data['name']; ?>" src="../img/<?php echo $data['pic']; ?>" class="h-16 w-16 flex-shrink-0 rounded-lg object-cover" />
 
                                                 <div class="ml-4">
-
-                                                    <p class="text-sm"><?php echo $data['name']; ?></p>
-
+                                                    <input type="hidden" name="id[]">
+                                                    <p class=" text-sm"><?php echo $data['name']; ?></p>
+                                                    <input type="hidden" name="product_name[]" value="<?php echo $data['name']; ?>">
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500"><?php echo $data['calibre'] ?></dl>
+                                                    <input type="hidden" name="product_calibre[]" value="<?php echo $data['calibre'] ?>">
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500"><?php echo $data['traitement'] ?></dl>
+                                                    <input type="hidden" name="product_traitement[]" value="<?php echo $data['traitement'] ?>">
                                                     <dl class="mt-1 space-y-1 text-xs text-gray-500">
                                                         <a href="deleteOne.php?name=<?php echo $data['name']; ?>">
                                                             <dt title="Delete" class="inline"><svg class="w-5 h-5 fill-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -71,6 +74,8 @@ require('../inc/totalPrice.php');
                                             <div>
                                                 <p class="text-sm"><?php echo $data['price']; ?>DH <small class="text-gray-500">x<?php echo $data['quantity']; ?></small>
                                                 </p>
+                                                <input type="hidden" name="product_price[]" value="<?php echo $data['price']; ?>">
+                                                <input type="hidden" name="product_quantity[]" value="<?php echo $data['quantity']; ?>">
                                             </div>
                                         </li>
 
@@ -111,7 +116,7 @@ require('../inc/totalPrice.php');
                         </div>
                         <fieldset id="fs-frm-selects" class="col-span-6">
                             <label for="timely" class="mb-1 block text-sm text-gray-600">Frais de livraison :</label>
-                            <select class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" name="timely" id="timely" required="" class="col-span-6">
+                            <select class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" name="frais" id="frais" required="" class="col-span-6">
                                 <option value="" selected="" disabled="">Choose</option>
                                 <option value="Frais de livraison 30DH sur Casablanca"> Frais de livraison 30DH sur Casablanca</option>
                                 <option value="Frais de livraison hors Casablanca 49DH">Frais de livraison hors Casablanca 49DH</option>
@@ -139,13 +144,13 @@ require('../inc/totalPrice.php');
                                 Address
                             </label>
 
-                            <input class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" type="tel" id="Address" name="adresse" required />
+                            <input class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" type="tel" id="Address" name="address" required />
                         </div>
 
 
 
                         <div class="col-span-6 mt-5">
-                            <input class="cursor-pointer block w-full rounded-lg bg-blue-700 p-2.5 text-sm text-white" type="submit" value="Command">
+                            <input class="cursor-pointer block w-full rounded-lg bg-blue-700 p-2.5 text-sm text-white" name="Command" type="submit" value="Command">
 
                         </div>
                     </div>
