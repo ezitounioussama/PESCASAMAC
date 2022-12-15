@@ -39,39 +39,41 @@ if (isset($_POST['Command'])) {
         mysqli_query($conn, "DELETE FROM cart");
 
         if (isset($userLastName))
-            $sql = "SELECT first_name,GROUP_CONCAT(product_name separator '<br>')
+            $sql = "SELECT first_name,last_name, email ,phone ,adresse ,frais ,GROUP_CONCAT(product_name separator '<br>')
              AS products_list,GROUP_CONCAT(product_calibre separator '<br>') 
              AS products_calibre ,GROUP_CONCAT(product_price separator '<br>') 
              AS price ,
-             SUM(cast(product_price as float)) as ttl_price  FROM  tbl_orders WHERE last_name= '$userLastName'";
+             SUM(cast(product_price as float)*product_quantity) as ttl_price   FROM  tbl_orders WHERE last_name= '$userLastName'";
 
 
         $result = $conn->query($sql); ?>
         <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
             <thead>
                 <tr>
-                    <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                        first name
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        full name
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        email
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        phone
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        address
                     </th>
 
-                    <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                        Product name
-                    </th>
-                    <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                        Calibre
-                    </th>
-                    <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                        Price
-                    </th>
-                    <th class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                        Total
-                    </th>
                 </tr>
             </thead>
 
             <tbody class="divide-y divide-gray-200">
                 <?php while ($row = $result->fetch_assoc()) {
                     $nm = $row['first_name'];
+                    $ln = $row['last_name'];
+                    $email = $row['email'];
+                    $phone = $row['phone'];
+                    $addresse = $row['adresse'];
+                    $frais = $row['frais'];
                     $p_name = $row['products_list'];
                     $calibre = $row['products_calibre'];
                     $prc = $row['price'];
@@ -79,8 +81,41 @@ if (isset($_POST['Command'])) {
                 }; ?>
                 <tr>
                     <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                        <?php echo $nm ?>
+                        <?php echo $nm . ' ' . $ln ?>
                     </td>
+                    <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        <?php echo $email ?>
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                        <?php echo $phone ?>
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                        <?php echo $addresse ?>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
+            <thead>
+                <tr>
+
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        Products list
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        Calibre
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        Price
+                    </th>
+                    <th class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">
+                        Total
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                <tr>
                     <td class="whitespace-nowrap px-4 py-2 text-gray-700">
                         <?php echo $p_name ?>
                     </td>
@@ -92,6 +127,14 @@ if (isset($_POST['Command'])) {
                 </tr>
             </tbody>
         </table>
+        <br>
+        <div>
+            <p class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900"><?php echo $frais ?></p>
+        </div>
+        <div>
+            <p class="whitespace-nowrap px-4 py-2 text-left font-bold text-gray-900">Total Price + Frais : &nbsp;<?php echo $Tprc ?></p>
+        </div>
+
 <?php
 
 
