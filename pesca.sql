@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2022 at 06:08 PM
+-- Generation Time: Dec 22, 2022 at 04:34 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `price` float NOT NULL,
   `quantity` int(11) NOT NULL,
@@ -36,13 +37,35 @@ CREATE TABLE `cart` (
   `traitement` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `cart`
+-- Table structure for table `tbl_orders`
 --
 
-INSERT INTO `cart` (`name`, `price`, `quantity`, `pic`, `calibre`, `traitement`) VALUES
-('Frites', 16, 2, '../img/Frite.jpg', 'Frites Semi-cuites 10/10 (Origine : E.U)', ''),
-('Rillettes De Maquereaux Aux Condiments', 0, 2, '../img/rillettes-de-maquereaux-aux-condiments.jpeg', '', '');
+CREATE TABLE `tbl_orders` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `adresse` text NOT NULL,
+  `frais` text NOT NULL,
+  `payment` varchar(100) NOT NULL,
+  `product_name` varchar(50) NOT NULL,
+  `product_calibre` varchar(50) NOT NULL,
+  `product_trtmt` varchar(50) NOT NULL,
+  `product_price` float NOT NULL,
+  `product_quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_orders`
+--
+
+INSERT INTO `tbl_orders` (`id`, `first_name`, `last_name`, `email`, `phone`, `adresse`, `frais`, `payment`, `product_name`, `product_calibre`, `product_trtmt`, `product_price`, `product_quantity`) VALUES
+(1, 'oussama', 'ezitouni', 'ezitounioussama@gmail.com', 623438624, '63 RES MOHAMED 6 LAYMOUN APPT 03 LAAYAYDA SALE', '49', 'TPE', 'Langoustines', '8/12Kg (La bte)', '', 100, 2),
+(2, 'oussama', 'ezitouni', 'ezitounioussama@gmail.com', 623438624, '63 RES MOHAMED 6 LAYMOUN APPT 03 LAAYAYDA SALE', '49', 'TPE', 'Chair de crabe', '250g', 'Congelé', 130, 2);
 
 -- --------------------------------------------------------
 
@@ -131,7 +154,13 @@ INSERT INTO `tbl_products` (`id`, `name`, `pic`, `c1`, `c2`, `c3`, `c4`, `c5`, `
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`name`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_orders`
+--
+ALTER TABLE `tbl_orders`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_products`
@@ -144,10 +173,22 @@ ALTER TABLE `tbl_products`
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT for table `tbl_orders`
+--
+ALTER TABLE `tbl_orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
