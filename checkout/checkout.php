@@ -33,6 +33,7 @@ require('../inc/totalPrice.php');
 
                     <div class="mt-8">
                         <p class="text-2xl font-medium tracking-tight"><?php echo $sum ?>&nbsp;DH</p>
+                        <input type="hidden" name="ttl_price" value="<?php echo $sum ?>">
                         <p class="mt-1 text-sm text-gray-500">For the purchase of</p>
                     </div>
 
@@ -118,8 +119,17 @@ require('../inc/totalPrice.php');
                             <label for="timely" class="mb-1 block text-sm text-gray-600">Frais de livraison :</label>
                             <select class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" name="frais" id="frais" required="" class="col-span-6">
                                 <option value="" selected="" disabled="">Choose</option>
-                                <option value="Frais de livraison 30DH sur Casablanca"> Frais de livraison 30DH sur Casablanca</option>
-                                <option value="Frais de livraison hors Casablanca 49DH">Frais de livraison hors Casablanca 49DH</option>
+                                <option value="30"> Frais de livraison 30DH sur Casablanca</option>
+                                <option value="49">Frais de livraison hors Casablanca 49DH</option>
+
+                            </select>
+                        </fieldset>
+                        <fieldset class="col-span-6">
+                            <label for="payment" class="mb-1 block text-sm text-gray-600">Frais de livraison :</label>
+                            <select class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" name="payment" id="payment" required="" class="col-span-6">
+                                <option value="" selected="" disabled="">Choose</option>
+                                <option value="Espece">Paiement a la Livraison Espece</option>
+                                <option value="TPE">Paiement a la Livraison Electronique (TPE)</option>
 
                             </select>
                         </fieldset>

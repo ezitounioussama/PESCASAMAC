@@ -117,7 +117,12 @@ require_once "../inc/db.php";
 
                     <div class="card-body px-0 py-0">
                         <?php
-                        $sql = "SELECT * FROM tbl_orders ";
+                        $sql = "SELECT first_name,last_name, email ,phone ,adresse ,frais, payment ,GROUP_CONCAT(product_name separator '<hr>')
+                        AS products_list,GROUP_CONCAT(product_calibre separator '<hr>') 
+                        AS products_calibre ,GROUP_CONCAT(product_trtmt separator '<hr>') 
+                        AS products_trtmt,GROUP_CONCAT(product_price separator '<hr>') 
+                        AS price ,GROUP_CONCAT(product_quantity separator '<hr>') 
+                        AS qty FROM  tbl_orders";
                         $result = $conn->query($sql);
                         ?>
 
@@ -171,25 +176,25 @@ require_once "../inc/db.php";
                                                     <span class="text-secondary text-sm font-weight-normal"><?php echo $row['frais'] ?></span>
                                                 </td>
                                                 <td class="align-middle text-left text-lg">
-                                                    <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['product_name'] ?></span>
+                                                    <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['products_list'] ?></span>
                                                 </td>
 
                                                 <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['product_calibre'] ?></span>
+                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_calibre'] ?></span>
                                                 </td>
                                                 <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['product_trtmt'] ?></span>
+                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_trtmt'] ?></span>
                                                 </td>
                                                 <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['product_price'] ?></span>
+                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['price'] ?></span>
                                                 </td>
                                                 </td>
                                                 <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['product_quantity'] ?></span>
+                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['qty'] ?></span>
                                                 </td>
 
                                                 <td class="align-middle">
-                                                    <a href=' inc/update.php?id=<?php echo $row["id"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit data">
+                                                    <a href='inc/approve.php?email=<?php echo $row["email"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit data">
 
 
                                                         <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
