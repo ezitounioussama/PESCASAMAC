@@ -159,7 +159,7 @@
                             <span
                               class='inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-white mb-3'
                             >
-                              <img src='../img/empty-cart.png' alt='empty-cart' class='h-8 w-8'/>
+                              <img src='img/empty-cart.png' alt='empty-cart' class='h-8 w-8'/>
                             </span>
                         
                             <p class='mt-3 text-lg font-medium sm:mt-0 sm:ml-3'>
