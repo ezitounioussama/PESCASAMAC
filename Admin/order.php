@@ -111,119 +111,133 @@ require_once "../inc/db.php";
     <div class="container-fluid py-4 px-5">
 
         <div class="row">
-            <div class="col-12">
-                <div class="card border shadow-xs mb-4">
+            <form action="inc/approve.php" method="post">
+                <div class="col-12">
+                    <div class="card border shadow-xs mb-4">
 
 
-                    <div class="card-body px-0 py-0">
-                        <?php
-                        $sql = "SELECT first_name,last_name, email ,phone ,adresse ,frais, payment ,GROUP_CONCAT(product_name separator '<hr>')
+                        <div class="card-body px-0 py-0">
+                            <?php
+                            $sql = "SELECT first_name,last_name, email ,phone ,adresse ,frais, payment ,GROUP_CONCAT(product_name separator '<hr>')
                         AS products_list,GROUP_CONCAT(product_calibre separator '<hr>') 
                         AS products_calibre ,GROUP_CONCAT(product_trtmt separator '<hr>') 
                         AS products_trtmt,GROUP_CONCAT(product_price separator '<hr>') 
                         AS price ,GROUP_CONCAT(product_quantity separator '<hr>') 
-                        AS qty FROM  tbl_orders";
-                        $result = $conn->query($sql);
-                        ?>
+                        AS qty FROM  tbl_orders GROUP BY email";
+                            $result = $conn->query($sql);
+                            ?>
 
-                        <div class="table-responsive p-0 m-0">
-                            <table class="table align-items-center mb-0" id="example">
-                                <thead class="bg-gray-100">
+                            <div class="table-responsive p-0 m-0">
+                                <table class="table align-items-center mb-0" id="example">
+                                    <thead class="bg-gray-100">
 
-                                    <tr>
+                                        <tr>
 
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9 w-32">FullName</th>
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9">Email</th>
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9">Phone</th>
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9">Address</th>
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9">Frais de livraison</th>
-                                        <th class="text-secondary text-xs font-weight-semibold opacity-9">Products list</th>
-                                        <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Calibre</th>
-                                        <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement</th>
-                                        <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Price</th>
-                                        <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Quantity</th>
-
-
-                                        <th class="text-secondary opacity-7"></th>
-
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-                                    <?php
-
-                                    if ($result->num_rows > 0) {
-
-                                        while ($row = $result->fetch_assoc()) {
-
-                                    ?>
-
-                                            <tr>
-                                                <td>
-                                                    <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['first_name'] . ' ' . $row['last_name'] ?></span>
-                                                </td>
-
-                                                <td class="align-middle text-left text-lg">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['email'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-left text-lg">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['phone'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-left text-lg">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['adresse'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-left text-lg">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['frais'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-left text-lg">
-                                                    <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['products_list'] ?></span>
-                                                </td>
-
-                                                <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_calibre'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_trtmt'] ?></span>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['price'] ?></span>
-                                                </td>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <span class="text-secondary text-sm font-weight-normal"><?php echo $row['qty'] ?></span>
-                                                </td>
-
-                                                <td class="align-middle">
-                                                    <a href='inc/approve.php?email=<?php echo $row["email"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit data">
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9 w-32">FullName</th>
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9">Email</th>
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9">Phone</th>
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9">Address</th>
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9">Frais de livraison</th>
+                                            <th class="text-secondary text-xs font-weight-semibold opacity-9">Products list</th>
+                                            <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Calibre</th>
+                                            <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement</th>
+                                            <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Price</th>
+                                            <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Quantity</th>
 
 
-                                                        <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                                            <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                                                        </svg>
-                                                    </a>
+                                            <th class="text-secondary opacity-7"></th>
 
-                                                </td>
+                                        </tr>
 
-                                            </tr>
-                                    <?php       }
-                                    }
+                                    </thead>
+                                    <tbody>
+                                        <?php
 
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="border-top py-3 px-3 d-flex align-items-center">
+                                        if ($result->num_rows > 0) {
 
+                                            while ($row = $result->fetch_assoc()) {
+
+                                        ?>
+
+                                                <tr>
+
+                                                    <td>
+                                                        <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['first_name'] . ' ' . $row['last_name'] ?></span>
+                                                        <input type="hidden" name="fullName" value="<?php echo $row['first_name'] . ' ' . $row['last_name'] ?>">
+                                                    </td>
+
+                                                    <td class="align-middle text-left text-lg">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['email'] ?></span>
+                                                        <input type="hidden" name="email" value="<?php echo $row['email'] ?>">
+                                                    </td>
+
+                                                    <td class="align-middle text-left text-lg">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['phone'] ?></span>
+                                                    </td>
+                                                    <td class="align-middle text-left text-lg">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['adresse'] ?></span>
+                                                    </td>
+                                                    <td class="align-middle text-left text-lg">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['frais'] ?></span>
+                                                    </td>
+                                                    <td class="align-middle text-left text-lg">
+                                                        <span class="badge badge-lg border border-success text-success bg-success"><?php echo $row['products_list'] ?></span>
+                                                    </td>
+
+                                                    <td class="align-middle text-center">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_calibre'] ?></span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['products_trtmt'] ?></span>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['price'] ?></span>
+                                                    </td>
+                                                    </td>
+                                                    <td class="align-middle text-center">
+                                                        <span class="text-secondary text-sm font-weight-normal"><?php echo $row['qty'] ?></span>
+                                                    </td>
+
+                                                    <td class="align-middle">
+
+                                                        <button class="border-none rounded-md p-2 text-white bg-transparent border border-0" name="approve">
+
+
+                                                            <svg width='20' height='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                                <path d="M374.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 178.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l80 80c12.5 12.5 32.8 12.5 45.3 0l160-160zm96 128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 86.6 297.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l256-256z" />
+                                                            </svg></button>
+                                                        <a href="inc/delete.php?email=<?php echo $row['email'] ?>">
+                                                            <svg width='20' height='20' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                                                <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                                                            </svg>
+                                                        </a>
+
+                                                    </td>
+
+                                                </tr>
+                                        <?php       }
+                                        }
+
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="border-top py-3 px-3 d-flex align-items-center">
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            </form>
         </div>
 
 
     </div>
 </main>
+
 <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
