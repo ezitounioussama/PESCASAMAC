@@ -122,7 +122,7 @@
             P.congelés
           </a>
           <a href="accompagnement/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
-            Accompagnements et Tartines
+            Accompagnement et poisson mariné
           </a>
           <a href="chair_araignee/home.php" class="block h-16 border-b-4 border-transparent leading-[4rem] hover:border-current hover:text-blue-600">
             chair d'araignee
@@ -304,7 +304,7 @@
                 <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="p_congele/home.php">P.Congeles</a>
               </li>
               <li class="mb-1">
-                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="accompagnement/home.php">Accompagnements et Tartines</a>
+                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="accompagnement/home.php">Accompagnement et poisson mariné</a>
               </li>
 
               <li class="mb-1">
