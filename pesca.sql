@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 22, 2022 at 04:34 AM
+-- Generation Time: Dec 26, 2022 at 04:49 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -58,14 +58,6 @@ CREATE TABLE `tbl_orders` (
   `product_price` float NOT NULL,
   `product_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_orders`
---
-
-INSERT INTO `tbl_orders` (`id`, `first_name`, `last_name`, `email`, `phone`, `adresse`, `frais`, `payment`, `product_name`, `product_calibre`, `product_trtmt`, `product_price`, `product_quantity`) VALUES
-(1, 'oussama', 'ezitouni', 'ezitounioussama@gmail.com', 623438624, '63 RES MOHAMED 6 LAYMOUN APPT 03 LAAYAYDA SALE', '49', 'TPE', 'Langoustines', '8/12Kg (La bte)', '', 100, 2),
-(2, 'oussama', 'ezitouni', 'ezitounioussama@gmail.com', 623438624, '63 RES MOHAMED 6 LAYMOUN APPT 03 LAAYAYDA SALE', '49', 'TPE', 'Chair de crabe', '250g', 'Congelé', 130, 2);
 
 -- --------------------------------------------------------
 
@@ -144,7 +136,16 @@ INSERT INTO `tbl_products` (`id`, `name`, `pic`, `c1`, `c2`, `c3`, `c4`, `c5`, `
 (45, 'Harengs Fumés Marines', 'harengs-fumes-marines.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
 (46, 'Rilettes De Saumon Au Citron Confit', 'rilettes-de-saumon-au-citron-confit.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
 (47, 'Rillettes De Maquereaux Aux Condiments', 'rillettes-de-maquereaux-aux-condiments.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
-(48, 'Tapenade D\'olives Noires', 'tapenade-dolives-noires.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement');
+(48, 'Tapenade D\'olives Noires', 'tapenade-dolives-noires.jpeg', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(52, 'Anchois salé', 'Anchoissale.jpeg', '250g', '', '', '', '', '', '', '', '', '', '', '', 0, 'accompagnement'),
+(53, 'Calamar farcis', 'Calamar farcis.png', '250g', '', '', '', '', '', '', '', '', '', '', '', 0, 'accompagnement'),
+(56, 'Saumons mariné', 'Saumons mariné.jpeg', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(57, 'Poulpe mariné', 'Poulpe mariné.jpeg', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(58, 'Clams et vernis farcis', 'Clams et vernis farcis.png', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(59, 'coquilles ST-jacques à la bretonne', 'coquilles ST-jacques à la bretonne.png', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(60, 'lasagne de poisson', 'lasagne de poisson.png', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(61, 'lasagne', 'lasagne.png', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement'),
+(62, 'parmentier de poisson', 'parmentier de poisson.png', '250g', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'accompagnement');
 
 --
 -- Indexes for dumped tables
@@ -176,19 +177,19 @@ ALTER TABLE `tbl_products`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_orders`
 --
 ALTER TABLE `tbl_orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
