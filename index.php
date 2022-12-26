@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Tailwind Framework CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
@@ -42,7 +43,9 @@
       },
     };
   </script> -->
-
+<div class="loader-wrapper bg-blue-500">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
 <!-- ALERT -->
 <div class="bg-blue-700 px-4 py-3 text-white">
   <p class="text-center text-xl font-medium band_font font-bold">
@@ -368,8 +371,8 @@
   <h2 class="text-2xl font-bold text-blue-800 md:text-3xl text-center m-5 body_font capitalize">
     Catalogue pesca samac
   </h2>
-  <div class="flex justify-evenly flex-wrap m-5">
-    <div class="relative rounded-lg bg-[url(img/first.webp)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+  <div class="flex justify-evenly flex-wrap m-5 ">
+    <div class="relative rounded-lg bg-[url(img/first.webp)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -385,7 +388,7 @@
         </div>
       </div>
     </div>
-    <div class="relative rounded-lg bg-[url(img/second.jpg)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/second.jpg)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -404,7 +407,7 @@
     </div>
   </div>
   <div class="flex justify-evenly flex-wrap m-5">
-    <div class="relative rounded-lg bg-[url(img/PoissonCongele.png)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/PoissonCongele.png)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -421,7 +424,7 @@
         </div>
       </div>
     </div>
-    <div class="relative rounded-lg bg-[url(img/PoissonFrais.jpeg)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/PoissonFrais.jpeg)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -440,7 +443,7 @@
     </div>
   </div>
   <div class="flex justify-evenly flex-wrap m-5">
-    <div class="relative rounded-lg bg-[url(img/Tarama.png)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/Tarama.png)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -457,7 +460,7 @@
         </div>
       </div>
     </div>
-    <div class="relative rounded-lg bg-[url(img/Accompagnement.png)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/Accompagnement.png)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -477,7 +480,7 @@
   </div>
 
   <div class="flex justify-evenly flex-wrap m-5">
-    <div class="relative rounded-lg bg-[url(img/Crustaces.jpg)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/Crustaces.jpg)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -494,7 +497,7 @@
         </div>
       </div>
     </div>
-    <div class="relative rounded-lg bg-[url(img/Coquillage.png)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
+    <div class="relative rounded-lg bg-[url(img/Coquillage.png)] swing bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64 mb-5 sm:mb-5">
       <span class="absolute inset-0 bg-gray-900/25 rounded-lg"></span>
 
       <div class="relative text-center w-72">
@@ -682,6 +685,10 @@
           });
         }
       }
+    });
+
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
     });
   </script>
 </body>

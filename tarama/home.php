@@ -9,7 +9,9 @@ require_once('inc/fetchData.php');
 
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
-
+<div class="loader-wrapper bg-blue-500">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
 
 <section>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">

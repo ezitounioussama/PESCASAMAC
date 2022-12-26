@@ -49,6 +49,9 @@ if (isset($_POST['Command'])) {
 
 
         $result = $conn->query($sql); ?>
+        <div class="loader-wrapper bg-blue-500">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
         <div class="m-3 flex ">
             <button id="download" class="group relative inline-flex items-center overflow-hidden rounded bg-indigo-600 px-8 py-3 text-white focus:outline-none focus:ring active:bg-indigo-500">
                 <span class="absolute right-0 translate-x-full transition-transform group-hover:-translate-x-4">

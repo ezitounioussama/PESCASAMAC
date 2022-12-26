@@ -8,7 +8,9 @@ $id = isset($_GET['id']) ? $_GET['id'] : '';
 $sql = "SELECT * FROM tbl_products WHERE id = '$id'";
 $featured = mysqli_query($conn, $sql);
 
-?>
+?><div class="loader-wrapper bg-blue-500">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
 <script src="../tarama/assests/traitments.js" defer></script>
 <section>
   <div class="relative mx-auto max-w-screen-xl px-4 py-8">
