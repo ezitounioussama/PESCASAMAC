@@ -11,9 +11,7 @@ require('../inc/totalPrice.php');
 
   plugins: [require('@tailwindcss/forms')]
 -->
-<div class="loader-wrapper bg-blue-500">
-  <span class="loader"><span class="loader-inner"></span></span>
-</div>
+
 <h1 class="sr-only">Checkout</h1>
 <div class="relative mx-auto max-w-screen-2xl">
     <form action="command.php" method="POST">

@@ -1,9 +1,13 @@
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-language" content="fr" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- JavaScript -->

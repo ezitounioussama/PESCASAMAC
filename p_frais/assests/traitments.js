@@ -7,119 +7,194 @@ if ($("#id").html() == 1) {
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
+      var inputVal1 = $("#p1").val();
+      $("#prc").html(inputVal1);
+      $("#product_price").val(inputVal1);
+      $("#currency").html("DH");
       $("svg").hide();
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
+      var inputVal1 = $("#p1").val();
+      $("#prc").html(inputVal1);
+      $("#product_price").val(inputVal1);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal1 = $("#p1").val();
+      $("#prc").html(inputVal1);
+      $("#product_price").val(inputVal1);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal1 = $("#p1").val();
+      $("#prc").html(inputVal1);
+      $("#product_price").val(inputVal1);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "400/600gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
+      var inputVal1 = $("#p1").val();
+      $("#prc").html(inputVal1);
+      $("#product_price").val(inputVal1);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
+      var inputVal2 = $("#p2").val();
+      $("#prc").html(inputVal2);
+      $("#product_price").val(inputVal2);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 6Kg+"
     ) {
       $("#trtm").html("");
+      var inputVal2 = $("#p2").val();
+      $("#prc").html(inputVal2);
+      $("#product_price").val(inputVal2);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal2 = $("#p2").val();
+      $("#prc").html(inputVal2);
+      $("#product_price").val(inputVal2);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal2 = $("#p2").val();
+      $("#prc").html(inputVal2);
+      $("#product_price").val(inputVal2);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "600/800gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
+      var inputVal2 = $("#p2").val();
+      $("#prc").html(inputVal2);
+      $("#product_price").val(inputVal2);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier"
     ) {
       $("#trtm").html("");
+      var inputVal3 = $("#p3").val();
+      $("#prc").html(inputVal3);
+      $("#product_price").val(inputVal3);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 10Kg+"
     ) {
       $("#trtm").html("");
+      var inputVal3 = $("#p3").val();
+      $("#prc").html(inputVal3);
+      $("#product_price").val(inputVal3);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal3 = $("#p3").val();
+      $("#prc").html(inputVal3);
+      $("#product_price").val(inputVal3);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal3 = $("#p3").val();
+      $("#prc").html(inputVal3);
+      $("#product_price").val(inputVal3);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "800/1000gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
+      var inputVal3 = $("#p3").val();
+      $("#prc").html(inputVal3);
+      $("#product_price").val(inputVal3);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "1000/1500gr" &&
@@ -127,52 +202,79 @@ if ($("#id").html() == 1) {
     ) {
       $("#trtm").html("");
       $("svg").hide();
-
+      var inputVal4 = $("#p4").val();
+      $("#prc").html(inputVal4);
+      $("#product_price").val(inputVal4);
+      $("#currency").html("DH");
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Entier caisse de 10Kg+"
     ) {
       $("#trtm").html("");
+      var inputVal4 = $("#p4").val();
+      $("#prc").html(inputVal4);
+      $("#product_price").val(inputVal4);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Filets écaillés désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal4 = $("#p4").val();
+      $("#prc").html(inputVal4);
+      $("#product_price").val(inputVal4);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Filets désarêté"
     ) {
       $("#trtm").html("");
+      var inputVal4 = $("#p4").val();
+      $("#prc").html(inputVal4);
+      $("#product_price").val(inputVal4);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "1000/1500gr" &&
       $("#myselection option:selected").text() == "Vidé"
     ) {
       $("#trtm").html("");
+      var inputVal4 = $("#p4").val();
+      $("#prc").html(inputVal4);
+      $("#product_price").val(inputVal4);
+      $("#currency").html("DH");
       $("svg").hide();
 
+      $("#add").attr("disabled", false);
       $("#myselection").css("border", "1px solid black");
     } else if (
       $("#mycalibre option:selected").text() == "Choisir une option" ||
       $("#myselection option:selected").text() == "Choisir une option"
     ) {
       $("#trtm").html("");
+      $("#currency").html("");
       $("svg").hide();
 
       $("#myselection").css("border", "1px solid black");
     } else {
       $("#svg").show();
       $("#trtm").html(" : Cet élément N'éxiste plus");
-
+      $("#prc").html("");
+      $("#currency").html("");
+      $("#add").attr("disabled", true);
       $("#myselection").css("border", "2px red solid");
     }
   });

@@ -1,22 +1,14 @@
-<?php require_once('../inc/header.php');
+﻿<?php require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('inc/fetchData.php');
 ?>
-
 <div class="loader-wrapper bg-blue-500">
   <span class="loader"><span class="loader-inner"></span></span>
 </div>
-<!--  sec products -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
-
 <section>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-start">
       <div class="lg:col-span-3">
-
-
         <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <?php echo $deleteMsg ?? ''; ?>
           <?php
@@ -55,7 +47,6 @@ require_once('inc/fetchData.php');
     </div>
   </div>
 </section>
-
 <script>
   window.addEventListener('resize', () => {
     const desktopScreen = window.innerWidth < 768
@@ -63,8 +54,4 @@ require_once('inc/fetchData.php');
     document.querySelector('details').open = !desktopScreen
   })
 </script>
-
-
-
-
 <?php require_once('../inc/footer.php'); ?>

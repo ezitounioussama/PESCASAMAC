@@ -26,20 +26,9 @@ $featured = mysqli_query($conn, $sql);
         <span class="hidden" id="id"><?= $product['id']; ?></span>
         <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
           <img alt="<?= $product['name']; ?>" src="../img/<?= $product['pic']; ?>" class="aspect-square w-full rounded-xl object-cover" id="myIMG" />
-          <!-- <div class="grid grid-cols-2 gap-4 lg:mt-4">
-            <img alt="Les Paul" src="../img/second.jpg" class="aspect-square w-full rounded-xl object-cover" id="altIMG" />
-          </div> -->
-
-
-
-
-
         </div>
 
         <div class="sticky top-0">
-          <!-- <strong class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600">
-            ******
-          </strong> -->
 
           <div class="mt-8 flex justify-between">
             <div class="max-w-[55ch]">
