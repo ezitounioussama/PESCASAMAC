@@ -2,7 +2,7 @@
 include("../inc/db.php");
 $db = $conn;
 $tableName = "tbl_products";
-$columns = ['id', 'name', 'pic', 'c1', 'c2', 'c3', 'c4', 'c5', 'description', 'price'];
+$columns = ['id', 'name', 'pic', 'c1', 'c2', 'c3', 'c4', 'c5', 'description', 'price', 'p2', 'p3', 'p4', 'p5'];
 $fetchData = fetch_data($db, $tableName, $columns);
 function fetch_data($db, $tableName, $columns)
 {

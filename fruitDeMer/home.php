@@ -2,12 +2,6 @@
 require_once('../inc/nav.php');
 require_once('inc/fetchData.php');
 ?>
-
-
-<!--  sec products -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 <div class="loader-wrapper bg-blue-500">
   <span class="loader"><span class="loader-inner"></span></span>
 </div>
