@@ -340,6 +340,10 @@ if (isset($_GET['id'])) {
                                     <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 5</th>
                                     <th class="text-center text-secondary text-xs font-weight-semibold opacity-7">Traitement 6</th>
                                     <th class="text-secondary opacity-7">Price</th>
+                                    <th class="text-secondary opacity-7">Price 2</th>
+                                    <th class="text-secondary opacity-7">Price 3</th>
+                                    <th class="text-secondary opacity-7">Price 4</th>
+                                    <th class="text-secondary opacity-7">Price 5</th>
 
                                     <th class="text-secondary opacity-7"></th>
                                     <th class="text-secondary opacity-7"></th>
@@ -407,6 +411,19 @@ if (isset($_GET['id'])) {
                                             <td class="align-middle text-center">
                                                 <span class="text-secondary text-sm font-weight-normal"><?php echo $row['price']; ?></span>
                                             </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['p2']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['p3']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['p4']; ?></span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-sm font-weight-normal"><?php echo $row['p5']; ?></span>
+                                            </td>
+
                                             <td class="align-middle">
                                                 <a href=' inc/update.php?id=<?php echo $row["id"]; ?>' class=" text-secondary font-weight-bold text-xs" data-bs-toggle="tooltip" data-bs-title="Edit data">
                                                     <svg width="14" height="14" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
