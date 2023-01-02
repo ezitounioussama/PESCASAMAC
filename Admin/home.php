@@ -40,10 +40,8 @@ if (isset($_POST['submit'])) {
     $pic = $_POST['pic'];
 
     $c1 = $_POST['c1'];
-
     $c2 = $_POST['c2'];
     $c3 = $_POST['c3'];
-
     $c4 = $_POST['c4'];
     $c5 = $_POST['c5'];
 
@@ -56,12 +54,17 @@ if (isset($_POST['submit'])) {
     $t6 = $_POST['t6'];
 
     $desc = $_POST['desc'];
+
     $prc = $_POST['price'];
+    $p2 = $_POST['p2'];
+    $p3 = $_POST['p3'];
+    $p4 = $_POST['p4'];
+    $p5 = $_POST['p5'];
 
     $cat = $_POST['cat'];
 
-    $sql = "INSERT INTO `tbl_products`(`name`, `pic`, `c1`, `c2`, `c3` ,`c4`, `c5`, `t1` , `t2`, `t3` , `t4`, `t5` , `t6`,`description`,`price`,`category`) VALUES 
-    ('$name','$pic','$c1','$c2','$c3','$c4','$c5','$t1','$t2','$t3','$t4','$t5','$t6','$desc','$prc','$cat')";
+    $sql = "INSERT INTO `tbl_products`(`name`, `pic`, `c1`, `c2`, `c3` ,`c4`, `c5`, `t1` , `t2`, `t3` , `t4`, `t5` , `t6`,`description`,`price`,`p2`,`p3`,`p4`,`p5`,`category`) VALUES 
+    ('$name','$pic','$c1','$c2','$c3','$c4','$c5','$t1','$t2','$t3','$t4','$t5','$t6','$desc','$prc','$p2','$p3','$p4','$p5','$cat')";
 
     $result = $conn->query($sql);
 
@@ -253,10 +256,37 @@ if (isset($_GET['id'])) {
                                                             <label class="form-label" for="desc">description</label>
                                                         </div>
                                                     </div>
+
+                                                </div>
+                                                <div class="row mb-4">
                                                     <div class="col">
                                                         <div class="form-outline">
                                                             <input type="text" id="price" name="price" class="form-control" />
                                                             <label class="form-label" for="price">price</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="p2" name="p2" class="form-control" />
+                                                            <label class="form-label" for="p2">p2</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="p3" name="p3" class="form-control" />
+                                                            <label class="form-label" for="p3">p3</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="p4" name="p4" class="form-control" />
+                                                            <label class="form-label" for="p4">p4</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="p5" name="p5" class="form-control" />
+                                                            <label class="form-label" for="p5">p5</label>
                                                         </div>
                                                     </div>
                                                 </div>

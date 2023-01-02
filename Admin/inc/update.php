@@ -37,22 +37,23 @@
                 $pic = $row['pic'];
 
                 $c1 = $row['c1'];
-
                 $c2  = $row['c2'];
                 $c3 = $row['c3'];
-
                 $c4  = $row['c4'];
                 $c5  = $row['c5'];
 
                 $t1 = $row['t1'];
-
                 $t2 = $row['t2'];
                 $t3 = $row['t3'];
-
                 $t4 = $row['t4'];
                 $t5 = $row['t5'];
-
                 $t6 = $row['t6'];
+
+                $price = $row['price'];
+                $p2 = $row['p2'];
+                $p3 = $row['p3'];
+                $p4 = $row['p4'];
+                $p5 = $row['p5'];
 
                 $id = $row['id'];
             }
@@ -65,24 +66,25 @@
                 $pic = $_POST['pic'];
 
                 $c1 = $_POST['c1'];
-
                 $c2 = $_POST['c2'];
                 $c3 = $_POST['c3'];
-
                 $c4 = $_POST['c4'];
                 $c5 = $_POST['c5'];
 
                 $t1 = $_POST['t1'];
-
                 $t2 = $_POST['t2'];
                 $t3 = $_POST['t3'];
-
                 $t4 = $_POST['t4'];
                 $t5 = $_POST['t5'];
-
                 $t6 = $_POST['t6'];
 
-                $sql = "UPDATE `tbl_products` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`c3`='$c3',`c4`='$c4',`c5`='$c5',`t1`='$t1' ,`t2`='$t2',`t3`='$t3' ,`t4`='$t4',`t5`='$t5' ,`t6`='$t6' WHERE `id`='$id'";
+                $price = $_POST['price'];
+                $p2 = $_POST['p2'];
+                $p3 = $_POST['p3'];
+                $p4 = $_POST['p4'];
+                $p5 = $_POST['p5'];
+
+                $sql = "UPDATE `tbl_products` SET `name`='$name',`pic`='$pic',`c1`='$c1',`c2`='$c2',`c3`='$c3',`c4`='$c4',`c5`='$c5',`t1`='$t1' ,`t2`='$t2',`t3`='$t3' ,`t4`='$t4',`t5`='$t5' ,`t6`='$t6'  ,`price`='$price' ,`p2`='$p2',`p3`='$p3',`p4`='$p4',`p5`='$p5' WHERE `id`='$id'";
 
                 $result = $conn->query($sql);
 
@@ -177,8 +179,30 @@
                     <input type="text" class="form-control" value="<?php echo $t6; ?>" name="t6" />
                     <label class=" form-label" for="form6Example6">Conditionnement 6</label>
                 </div>
+                <div class="col mb-4">
 
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" value="<?php echo $price; ?>" name="price" />
+                        <label class=" form-label" for="form6Example6">Price</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" value="<?php echo $p2; ?>" name="p2" />
+                        <label class=" form-label" for="form6Example6">Price 2</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" value="<?php echo $p3; ?>" name="p3" />
+                        <label class=" form-label" for="form6Example6">Price 3</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" value="<?php echo $p4; ?>" name="p4" />
+                        <label class=" form-label" for="form6Example6">Price 4</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" value="<?php echo $p5; ?>" name="p5" />
+                        <label class=" form-label" for="form6Example6">Price 5</label>
+                    </div>
 
+                </div>
 
                 <!-- Submit button -->
                 <input type="submit" class="btn btn-primary  mb-4" value="Submit" name="update">
