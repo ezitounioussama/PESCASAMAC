@@ -465,7 +465,8 @@
 
       <div class="relative text-center w-72">
         <h3 class="button_font text-2xl font-bold uppercase text-white sm:text-3xl">
-          Accompagnements
+          Accompagnement et poisson mariné
+
         </h3>
 
         <!-- <p class="mt-1 text-white/95">1951-2022. Unchanged. Unmatched.</p> -->
