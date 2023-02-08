@@ -125,7 +125,7 @@ require('../inc/totalPrice.php');
                             </select>
                         </fieldset>
                         <fieldset class="col-span-6">
-                            <label for="payment" class="mb-1 block text-sm text-gray-600">Frais de livraison :</label>
+                            <label for="payment" class="mb-1 block text-sm text-gray-600">Type de payment :</label>
                             <select class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" name="payment" id="payment" required="" class="col-span-6">
                                 <option value="" selected="" disabled="">Choose</option>
                                 <option value="Espece">Paiement a la Livraison Espece</option>
@@ -146,7 +146,7 @@ require('../inc/totalPrice.php');
                                 Phone
                             </label>
 
-                            <input class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" type="tel" id="phone" name="phone" required />
+                            <input class="w-full rounded-lg border-gray-200 p-2.5 text-sm shadow-sm" type="text" id="phone" name="phone" required />
                         </div>
 
                         <div class="col-span-6">

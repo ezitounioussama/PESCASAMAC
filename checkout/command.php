@@ -2,6 +2,9 @@
 require_once('../inc/header.php');
 require_once('../inc/nav.php');
 require_once('../inc/db.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 //  product data
 $productName = $_POST['product_name'];
 $productCalibre = $_POST['product_calibre'];
@@ -36,6 +39,7 @@ if (isset($_POST['Command'])) {
 
         $result = $conn->query($sql);
     }
+
     if ($result == TRUE) {
 
         mysqli_query($conn, "DELETE FROM cart");
