@@ -14,8 +14,7 @@
   <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
   <!-- taiwlidn modal -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
   <!-- end modal here -->
   <!-- Main Style -->
   <link rel="stylesheet" href="style.css" />
@@ -180,102 +179,100 @@
         <div class="ml-8 flex items-center">
           <div class="flex items-center">
             <!-- Button trigger modal -->
-            <button type="button" class="m-6 inline-flex relative w-fit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="m-6 inline-flex relative w-fit" id="open-btn">
               <div class="absolute inline-block top-0 right-0 bottom-auto left-auto translate-x-2/4 -translate-y-1/2 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 p-2.5 text-xs bg-blue-500 rounded-full z-10"></div>
               <div class="px-3 py-3 border border-blue-600 flex items-center justify-center text-center rounded-lg">
                 <div>
-                  <!-- <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                            </svg> -->
                   <img src="img/carts.png" alt="cart" class="h-4 w-4" />
                 </div>
               </div>
             </button>
 
             <!-- Modal -->
-            <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog relative w-auto pointer-events-none">
-                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
-                  <div class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
-                    <!-- <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalLabel">Cart</h5> -->
+            <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="my-modal">
 
-                    <button type="button" class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="modal" aria-label="Close">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="modal-body relative p-4">
-                    <!-- products in the cart -->
-                    <?php
-                    if (is_array($fetch)) {
-                      $sn = 1;
-                      foreach ($fetch  as $data) {
-                    ?>
-                        <div class="flex items-start pt-4 pb-4 ">
+              <div class="modal-content border-none shadow-lg relative flex flex-col w-[30rem] pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                <div class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+                  <!-- <h5 class="text-xl font-medium leading-normal text-gray-800" id="exampleModalLabel">Cart</h5> -->
 
-                          <img alt="<?php echo $data['name']; ?>" src="img/<?php echo $data['pic']; ?>" class="h-16 w-16 rounded-lg border-2 border-black object-cover" />
+                  <button id="btn-close" type="button" class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="modal-body relative p-4">
+                  <!-- products in the cart -->
+                  <?php
+                  if (is_array($fetch)) {
+                    $sn = 1;
+                    foreach ($fetch  as $data) {
+                  ?>
+                      <div class="flex items-start pt-4 pb-4 ">
 
-                          <div class="ml-4">
-                            <h3 class="text-sm"><?php echo $data['name']; ?></h3>
+                        <img alt="<?php echo $data['name']; ?>" src="img/<?php echo $data['pic']; ?>" class="h-16 w-16 rounded-lg border-2 border-black object-cover" />
 
-                            <dl class="mt-1 space-y-1 text-xs text-gray-500">
-                              <div>
-                                <dt class="inline ">Price: <span class="price"><?php echo $data['price']; ?></span> MAD</dt>
+                        <div class="ml-4">
+                          <h3 class="text-sm"><?php echo $data['name']; ?></h3>
 
-                              </div>
+                          <dl class="mt-1 space-y-1 text-xs text-gray-500">
+                            <div>
+                              <dt class="inline ">Price: <span class="price"><?php echo $data['price']; ?></span> MAD</dt>
 
-                              <div>
-                                <dt class="inline">Qte :</dt>
-                                <dd class="inline" class="qty"><?php echo $data['quantity']; ?></dd>
-                              </div>
+                            </div>
 
-                              <div>
+                            <div>
+                              <dt class="inline">Qte :</dt>
+                              <dd class="inline" class="qty"><?php echo $data['quantity']; ?></dd>
+                            </div>
 
-                                <dd class="inline" class="qty"><?php echo $data['calibre']; ?></dd>
-                              </div>
-                              <div>
-                                <dt class="inline"><?php echo $data['traitement'];
-                                                    ?></dt>
-                              </div>
-                            </dl>
-                          </div>
+                            <div>
 
+                              <dd class="inline" class="qty"><?php echo $data['calibre']; ?></dd>
+                            </div>
+                            <div>
+                              <dt class="inline"><?php echo $data['traitement'];
+                                                  ?></dt>
+                            </div>
+                          </dl>
                         </div>
-                      <?php
-                        $sn++;
-                      }
-                    } else { ?>
 
-                      <?php echo $fetch; ?>
+                      </div>
                     <?php
+                      $sn++;
                     }
+                  } else { ?>
 
-                    require('inc/totalPrice.php');
-                    ?>
+                    <?php echo $fetch; ?>
+                  <?php
+                  }
 
-                    <div class='space-y-4 text-center'>
-                      <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
-                        Total : <span class="text-md font-bold" id="total"><?php echo $sum; ?>&nbsp;DH</span>
-                      </p>
-                    </div>
-                    <!-- end of products -->
+                  require('inc/totalPrice.php');
+                  ?>
 
+                  <div class='space-y-4 text-center'>
+                    <p class='block mb-2 w-full border border-black rounded-md text-black p-4 text-sm font-medium '>
+                      Total : <span class="text-md font-bold" id="total"><?php echo $sum; ?>&nbsp;DH</span>
+                    </p>
                   </div>
-                  <div class="modal-footer p-4 border-t border-gray-200 rounded-b-md">
-                    <div class="space-y-4 text-center">
-                      <a class="block rounded-full border border-blue-500 px-8 py-3 text-sm font-medium text-blue-600" href="checkout/checkout.php">
-                        CheckOut/Modify your Cart
-                      </a>
-                    </div>
+                  <!-- end of products -->
+
+                </div>
+                <div class="modal-footer p-4 border-t border-gray-200 rounded-b-md">
+                  <div class="space-y-4 text-center">
+                    <a class="block rounded-full border border-blue-500 px-8 py-3 text-sm font-medium text-blue-600" href="checkout/checkout.php">
+                      CheckOut/Modify your Cart
+                    </a>
                   </div>
                 </div>
               </div>
+
             </div>
 
           </div>
         </div>
+
       </div>
       <!-- mobile nav -->
       <div class="navbar-menu relative z-50 hidden">
